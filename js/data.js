@@ -23,7 +23,7 @@ function formatTwitterJson(data){
 	for(var i=0;i < data.length;i++){
 		var randomnumber=Math.floor(Math.random()*4);
 		var tweet = data[i];
-		var statusurl = "http://twitter.com/nbprithv/status/"
+		var statusurl = "http://twitter.com/nbprithv/status/";
 		var finaltext = '<a href="'+statusurl+tweet.id_str+'" target="blank"><li style="background-color:'+twittercolor[randomnumber]+';color:#000">'+tweet.text+'</li></a>';
 		$('#content #submenu ul').append(finaltext);
 	};
