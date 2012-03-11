@@ -65,6 +65,16 @@ function storeFourSquareJson(data){
 }
 function formatFourSquareJson(data){
 	var fscolor = ['#17649A','#40B3DF','#A8CB17','#FAAA00'];
+	if(!data){
+		for(var i=0;i < 9;i++){
+			var randomnumber=Math.floor(Math.random()*4);
+			if(i==0)
+			var text = '<li style="background-color:'+fscolor[randomnumber]+';color:#000">FourSquare doesn\'t want to respond. Try reloading.</li>';
+			else
+			var text = '<li style="background-color:'+fscolor[randomnumber]+';color:#000"></li>';
+			$('#content #submenu ul').append(text);
+		}
+	}else{
 	var recentcheckins = data.response.checkins.items;
 	for(var i=0;i < recentcheckins.length;i++){
 		var randomnumber=Math.floor(Math.random()*4);
@@ -74,6 +84,7 @@ function formatFourSquareJson(data){
 		'<div style="float:left;overflow:none;width:40px;white-space:nowrap;margin-left:5px;color:#000">'+checkin.venue.name+'</div></li>';
 		$('#content #submenu ul').append(finaltext);
 	};
+	}
 }
 function getFourSquareBadgeJson(){
 		var fsbadgeurl = "https://api.foursquare.com/v2/users/self/badges?oauth_token=QQUAF43HGEPHMEZFOHAHAXI5RTUO1F1KOMSSY1LO31HM13E2&v=20120308&callback=storeFSBadgeJson";
@@ -87,6 +98,16 @@ function storeFSBadgeJson(data){
 }
 function formatFourSquareBadgeJson(data){
 	var fscolor = ['#17649A','#40B3DF','#A8CB17','#FAAA00'];
+	if(!data){
+		for(var i=0;i < 9;i++){
+			var randomnumber=Math.floor(Math.random()*4);
+			if(i==0)
+			var text = '<li style="background-color:'+fscolor[randomnumber]+';color:#000">FourSquare doesn\'t want to respond. Try reloading.</li>';
+			else
+			var text = '<li style="background-color:'+fscolor[randomnumber]+';color:#000"></li>';
+			$('#content #submenu ul').append(text);
+		}
+	}else{
 	var allbadges = data.response.sets.groups[0].items;
 	for(var i=0;i<allbadges.length;i++){
 		var randomnumber=Math.floor(Math.random()*4);
@@ -98,6 +119,7 @@ function formatFourSquareBadgeJson(data){
 		'<div style="float:left;overflow:none;width:40px;white-space:nowrap;margin-left:5px;color:#000">'+badgehash.name+'</div></li>';
 		$('#content #submenu ul').append(finaltext);
 	}	
+	}
 }
 function getBlogRoll(){
 	var contactme = [
@@ -105,43 +127,44 @@ function getBlogRoll(){
 			"name": "TechCrunch",
 			"link": "http://techcrunch.com",
 			"style":"background-color:#000000;color:#FFF;",
-			"img":"img/techcrunch.png"
+			"logo":"background-position: 0 -1349px;"
 		},
 		{
 			"name": "Mashable",
 			"link": "http://mashable.com",
-			"style":"background-color:#5E88B4;color:#000"
+			"style":"background-color:#5E88B4;color:#000",
+			"logo":"background-position: 0 -1349px;"
 		},
 		{
 			"name": "SitePoint",
 			"link": "http://sitepoint.com",
 			"style":"background-color:#FFFFFF;color:#000000",
-			"img":"img/sitepoint.jpg"
+			"logo":"background-position: 0 -1349px;"
 		},
 		{
 			"name": "FoodNetwork",
 			"link": "http://foodnetwork.com",
-			"style":"background-color:#CC0000;"
+			"style":"background-color:#CC0000;",
+			"logo":"background-position: 0 -1349px;"
 		},
 		{
 			"name": "allthingsd",
 			"link": "http://allthingsd.com",
 			"style":"background-color:#38698E",
-			"img":"img/allthingsd.png"
+			"logo":"background-position: 0 -1349px;"
 		},
 		{
 			"name": "AutoBlog",
 			"link": "https://autoblog.com",
 			"style":"background-color:#D50F0F",
+			"logo":"background-position: 0 -1349px;"
 		},
 	];
 	for(var i=0;i<contactme.length;i++){
 		var data = contactme[i];
-		var text = '';
-		if(data.img)
-			text =  '<img src="'+data.img+'" style="float:left;" height="64px" width="64px"/>'+'<div style="float:left;margin-left:5px;">'+data.name+'</div>'; 
-		else
-			text = '<div>'+data.name+'</div>';
+		//var text =  '<img src="img/rss.png" style="float:left;" />'+'<div style="float:left;margin-left:5px;">'+data.name+'</div>'; 
+		var text =  '<div class="logo" style="background:url(\'img/sprites.png\') no-repeat;'+data.logo+'"></div>'+
+				'<div style="float:left;margin-left:5px;">'+data.name+'</div>'; 
 		var finaltext = '<a href="'+data.link+'" target="blank"><li style="'+data.style+'">'+
 		text+
 		'</li></a>';
@@ -149,7 +172,7 @@ function getBlogRoll(){
 	}
 }
 function getGames(){
-	var contactme = [
+	var games = [
 		{
 			"name": "Canabalt",
 			"link": "http://adamatomic.com/canabalt/",
@@ -160,29 +183,29 @@ function getGames(){
 			"name": "Angry Birds",
 			"link": "https://chrome.google.com/webstore/detail/aknpkdffaafgjchaibgeefbgmgeghloj",
 			"style":"background-color:#D7002E;",
-			"img":"img/angrybirds.png"
+			"logo":"background-position: 0 0;"
 		},
 		{
 			"name": "Cut the rope",
 			"link": "http://www.cuttherope.ie/",
 			"style":"background-color:#FEBA19;color:#000000;",
-			"img":"img/cuttherope.png"
+			"logo":"background-position: 0 -114px;"
 		},
 		{
 			"name": "Plants VS Zombies",
 			"link": "https://chrome.google.com/webstore/detail/mmcegpfdgcoclcdfkjahiimlikdpnina",
 			"style":"background-color:#6EDA14;color:#000000;",
-			"img":"img/plantsvszombies.png"
-
+			"logo":"background-position: 0 -1121px;"
 		}
 	];
-	for(var i=0;i<contactme.length;i++){
-		var data = contactme[i];
+	for(var i=0;i<games.length;i++){
+		var data = games[i];
 		var text = '';
 		if(data.img)
 			text =  '<img src="'+data.img+'" style="float:left;" height="64px" width="64px"/>'+'<div style="float:left;margin-left:5px;">'+data.name+'</div>'; 
 		else
-			text = '<div>'+data.name+'</div>';
+			text = '<div class="logo" style="background:url(\'img/sprites.png\') no-repeat;'+data.logo+'"></div>'+
+				'<div>'+data.name+'</div>';
 		var finaltext = '<a href="'+data.link+'" target="blank"><li style="'+data.style+'">'+
 		text+
 		'</li></a>';
@@ -195,61 +218,61 @@ function getContactMe(){
 			"name": "gmail",
 			"link": "mailto:niranjan.prithviraj@gmail.com",
 			"style":"background-color:#1878C0;color:#000;",
-			"img":"img/gmail.png"
+			"logo":"background-position: 0 -570px;"
 		},
 		{
 			"name": "pintrest",
 			"link": "http://pinterest.com/nbprithv/",
 			"style":"background-color:#CC0000;",
-			"img":"http://passets-cdn.pinterest.com/images/big-p-button.png" 
+			"logo":"background-position: 0 -1010px;"
 		},
 		{
 			"name": "quora",
 			"link": "http://www.quora.com/Niranjan-B-Prithviraj",
 			"style":"background-color:#A82400;color:#000000",
-			"img":"img/quora.png"
+			"logo":"background-position: 0 -1235px;"
 		},
 		{
 			"name": "google plus",
 			"link": "https://plus.google.com/u/0/107223123319047956323/posts",
 			"style":"background-color:#D50F0F",
-			"img":"img/gplus.png"
+			"logo":"background-position: 0 -668px;"
 		},
 		{
 			"name": "twitter",
 			"link": "http://twitter.com/nbprithv",
 			"style":"background-color:#4099FF;color:#000",
-			"img":"img/tweet.png"
+			"logo":"background-position: 0 -1577px;"
 		},
 		{
 			"name": "facebook",
 			"link": "http://facebook.com/niranjanprithviraj",
 			"style":"background-color:#335795;color:#000",
-			"img":"img/facebook.png"
+			"logo":"background-position: 0 -342px;"
 		},
 		{
 			"name": "linkedin",
 			"link": "http://in.linkedin.com/in/nbprithviraj",
 			"style":"background-color:#247BA7;color:#000",
-			"img":"img/linkedin.png"
+			"logo":"background-position: 0 -896px;"
 		},
 		{
 			"name": "foursquare",
-			"link": "http://facebook.com/niranjanprithviraj",
+			"link": "https://foursquare.com/nbprithv",
 			"style":"background-color:#40B3DF;color:#000",
-			"img":"img/foursquare.png",
+			"logo":"background-position: 0 -456px;"
 		},
 		{
 			"name": "last.fm",
-			"link": "http://facebook.com/niranjanprithviraj",
+			"link": "http://www.last.fm/user/nbprithv",
 			"style":"background-color:#C91B4A",
-			"img":"img/lastfm.png"
+			"logo":"background-position: 0 -782px;"
 		},
 		{
 			"name": "skype",
-			"link": "niranjan.prithviraj",
+			"link": "skype:niranjan.prithviraj",
 			"style":"background-color:#C91B4A",
-			"img":"img/skype.png"
+			"logo":"background-position: 0 -1463px;"
 		}
 	];
 	for(var i=0;i<contactme.length;i++){
@@ -258,7 +281,8 @@ function getContactMe(){
 		if(data.img)
 			text =  '<img src="'+data.img+'" style="float:left;" height="64px" width="64px"/>'+'<div style="float:left;margin-left:5px;">'+data.name+'</div>'; 
 		else
-			text = '<div>'+data.name+'</div>';
+			text = '<div class="logo" style="background:url(\'img/sprites.png\') no-repeat;'+data.logo+'"></div>'+
+				'<div>'+data.name+'</div>';
 		var finaltext = '<a href="'+data.link+'" target="blank"><li style="'+data.style+'">'+
 		text+
 		'</li></a>';

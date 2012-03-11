@@ -52,6 +52,7 @@
 				<div id="title"></div>
 				<ul></ul>
 			</div>
+			<div class="clear"></div>
 		</div>
 	</div>
 	<div id="footer">

@@ -3,6 +3,7 @@ body{background-image:url('../img/type.png');padding:0px;margin:0px;font-family:
 .clear{clear:both;}
 a{text-decoration:none;color:#B0B0B0;}
 a:hover{text-decoration:underline;}
+.clear{clear:both;}
 #nav{background-color:#2d2d2d;width:100%;border-top:5px solid #F74A05;text-align:center;height:25px;}
 #nav p{font-size:10px;text-align:left;float:left;}
 #nav ul{font-size:10px;list-style-type:none;float:right;}
@@ -24,5 +25,6 @@ a:hover{text-decoration:underline;}
 #content #submenu #title #fsoptions .unselected{text-decoration:underline;cursor:pointer;}
 #content #submenu a{text-decoration:none;color:#B0B0B0;}
 #content #submenu li{list-style:none;height:75px;width:250px;float:left;margin:5px;padding:10px;overflow:hidden;text-decoration:none;}
+#content #submenu li .logo{height:64px;width:64px;float:left;}
 #footer{width:100%;text-align:left;font-size:10px;margin:0px;}
 #footer,.push{height: 1em;clear:both;}
