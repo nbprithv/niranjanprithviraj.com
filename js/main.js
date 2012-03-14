@@ -3,6 +3,7 @@ $(document).ready(function(){
 	getLastfmFeed();
 	getFourSquareFeed();
 	getFourSquareBadgeJson();
+	getNikePlusFeed();
 	$("#content #mainmenu li").click(function(){
 		$('#content #submenu ul').html('');
 		var id = $(this).attr('id');
@@ -26,6 +27,9 @@ $(document).ready(function(){
 			break;
 			case 'lastfm':
 				formatLastfmJson(window.lastfmJson);
+			break;
+			case 'nikeplus':
+				formatNikePlusJson(window.nikeplusJson);
 			break;
 			case 'contactme':
 				getContactMe();

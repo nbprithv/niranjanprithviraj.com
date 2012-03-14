@@ -44,6 +44,7 @@
 					<li id="blogroll">blog roll</li>
 					<li id="foursquare">foursquare</li>
 					<li id="lastfm">last.fm</li>
+					<li id="nikeplus">nike+</li>
 					<li id="games">games</li>
 					<li id="contactme">contact me</li>
 				</ul>

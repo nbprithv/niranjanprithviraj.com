@@ -289,3 +289,63 @@ function getContactMe(){
 		$('#content #submenu ul').append(finaltext);
 	}
 }
+function getNikePlusFeed(){
+	var nikeplusapi = "getdata.php?callback=storeNikePlusJson";
+	var newEl = document.createElement('script');
+	newEl.id = 'nikeplusjson';
+	newEl.src=nikeplusapi;
+	document.getElementsByTagName('body')[0].appendChild(newEl);
+}
+function storeNikePlusJson(data){
+	window.nikeplusJson = data;
+}
+function formatNikePlusJson(data){
+	var nikepluscolor = ['#DC442F','#0073FF','#17649A','#6DABAC'];
+	if(!data){
+		for(var i=0;i < 9;i++){
+			var randomnumber=Math.floor(Math.random()*4);
+			if(i==0)
+			var text = '<li style="background-color:'+nikepluscolor[randomnumber]+';color:#000">Nike+ is too slow. Can\'t display my runs now!</li>';
+			else
+			var text = '<li style="background-color:'+nikepluscolor[randomnumber]+';color:#000"></li>';
+			$('#content #submenu ul').append(text);
+		}
+	}else{
+	var runs = data.runList.run;
+	var i = runs.length-1;
+	var j = 0;
+	var totaldistance = '<li style="background-color:#FFF;color:#000">'+
+			'<img src="img/route.gif" style="border:2px solid #FFF;float:left;" height="64px" width="64px"/>'+
+			'<div style="margin-left:5px;float:left"><div>total distance</div><div>'+Math.round(data.runListSummary.distance*10)/10+' km</div></div></li>';
+	var y = data.runListSummary.runDuration/1000;
+	y /= 60;
+	y /= 60;
+	var totalminutes = y % 24;
+	totalminutes = Math.round(totalminutes*10)/10;
+	var totaltime = '<li style="background-color:#FFF;color:#000">'+
+			'<img src="img/stopwatch.gif" style="border:2px solid #FFF;float:left;" height="64px" width="64px"/>'+
+			'<div style="margin-left:5px;float:left"><div>total hours</div><div>'+totalminutes+'</div></div></li>';
+	var totalcalories = '<li style="background-color:#FFF;color:#000">'+
+			'<img src="img/fire.png" style="border:2px solid #FFF;float:left;" height="64px" width="64px"/>'+
+			'<div style="margin-left:5px;float:left"><div>calories burnt</div><div>'+data.runListSummary.calories+'</div></div></li>';
+	$('#content #submenu ul').append(totaldistance);
+	$('#content #submenu ul').append(totaltime);
+	$('#content #submenu ul').append(totalcalories);
+	while(j<6){
+		var randomnumber=Math.floor(Math.random()*4);
+		var run = runs[i];
+		var x  = run.duration/1000;
+		x /= 60;
+		var minutes = x % 60;
+		minutes = Math.round(minutes*10)/10;
+		var distance = run.distance;
+		distance = Math.round(distance*10)/10;
+		var finaltext = '<li style="background-color:'+nikepluscolor[randomnumber]+';color:#000">'+
+				'<img src="img/nikeplus.png" style="float:left;"/>'+
+				'<div style="margin-left:5px;float:left"><div>'+distance+' km</div><div>'+minutes+' minutes</div></div></li>';
+		$('#content #submenu ul').append(finaltext);
+		i--;
+		j++;
+	};
+	}
+}
