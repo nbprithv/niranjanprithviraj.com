@@ -1,13 +1,14 @@
-html,body{height: 100%;}
+html,body{height: 102%;}
 body{background-image:url('../img/type.png');padding:0px;margin:0px;font-family: 'Open Sans', sans-serif,"lucida grande",tahoma,verdana,arial,sans-serif;color:#B0B0B0;}
 .clear{clear:both;}
 a{text-decoration:none;color:#B0B0B0;}
 a:hover{text-decoration:underline;}
+#content #mainmenu a:hover{text-decoration:none;}
 .clear{clear:both;}
 #nav{background-color:#2d2d2d;width:100%;border-top:5px solid #F74A05;text-align:center;height:25px;}
 #nav p{font-size:10px;text-align:left;float:left;}
 #nav ul{font-size:10px;list-style-type:none;float:right;}
-#nav ul li{display:inline;padding-right:3px;}
+#nav ul li{display:inline;padding-right:3px;-webkit-transform: rotateY(180deg);}
 #nav ul li:hover{border-bottom:2px solid #FFFFFF;cursor:pointer;}
 .wrap{min-height: 100%;height: auto !important;height: 100%;margin: 0 auto -2em;}
 #content .contentbox{width:80%;margin-left:10%;margin-right:10%;opacity:.7;}

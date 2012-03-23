@@ -79,8 +79,11 @@ function formatFourSquareJson(data){
 	for(var i=0;i < recentcheckins.length;i++){
 		var randomnumber=Math.floor(Math.random()*4);
 		var checkin = recentcheckins[i];
+		var icon = ''; 
+		if(checkin.venue.categories[0])
+			icon = '<img src="'+checkin.venue.categories[0].icon+'" style="float:left" />'; 
 		var finaltext = '<li style="background-color:'+fscolor[randomnumber]+'">'+
-		'<img src="'+checkin.venue.categories[0].icon+'" style="float:left" />'+
+		icon+
 		'<div style="float:left;overflow:none;width:40px;white-space:nowrap;margin-left:5px;color:#000">'+checkin.venue.name+'</div></li>';
 		$('#content #submenu ul').append(finaltext);
 	};
