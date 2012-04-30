@@ -314,6 +314,7 @@ function formatNikePlusJson(data){
 			$('#content #submenu ul').append(text);
 		}
 	}else{
+console.log(data.runListSummary.runDuration);
 	var runs = data.runList.run;
 	var i = runs.length-1;
 	var j = 0;
@@ -321,9 +322,11 @@ function formatNikePlusJson(data){
 			'<img src="img/route.gif" style="border:2px solid #FFF;float:left;" height="64px" width="64px"/>'+
 			'<div style="margin-left:5px;float:left"><div>total distance</div><div>'+Math.round(data.runListSummary.distance*10)/10+' km</div></div></li>';
 	var y = data.runListSummary.runDuration/1000;
+
 	y /= 60;
 	y /= 60;
-	var totalminutes = y % 24;
+	console.log(y);
+	var totalminutes = y;
 	totalminutes = Math.round(totalminutes*10)/10;
 	var totaltime = '<li style="background-color:#FFF;color:#000">'+
 			'<img src="img/stopwatch.gif" style="border:2px solid #FFF;float:left;" height="64px" width="64px"/>'+
