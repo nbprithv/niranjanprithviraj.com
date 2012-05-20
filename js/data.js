@@ -314,7 +314,6 @@ function formatNikePlusJson(data){
 			$('#content #submenu ul').append(text);
 		}
 	}else{
-console.log(data.runListSummary.runDuration);
 	var runs = data.runList.run;
 	var i = runs.length-1;
 	var j = 0;
@@ -325,7 +324,6 @@ console.log(data.runListSummary.runDuration);
 
 	y /= 60;
 	y /= 60;
-	console.log(y);
 	var totalminutes = y;
 	totalminutes = Math.round(totalminutes*10)/10;
 	var totaltime = '<li style="background-color:#FFF;color:#000">'+
