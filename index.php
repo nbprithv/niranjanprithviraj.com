@@ -40,13 +40,13 @@
 			<div class="clear"></div>
 			<div id="mainmenu">
 				<ul>
-					<li id="twitter">twitter</li>
-					<li id="blogroll">blog roll</li>
-					<li id="foursquare">foursquare</li>
-					<li id="lastfm">last.fm</li>
-					<li id="nikeplus">nike+</li>
-					<li id="games">games</li>
-					<li id="contactme">contact me</li>
+					<a href="#twitter"><li id="twitter">twitter</li></a>
+					<a href="#blogroll"><li id="blogroll">blog roll</li></a>
+					<a href="#foursquare"><li id="foursquare">foursquare</li></a>
+					<a href="#lastfm"><li id="lastfm">last.fm</li></a>
+					<a href="#nikeplus"><li id="nikeplus">nike+</li></a>
+					<a href="#games"><li id="games">games</li></a>
+					<a href="#contactme"><li id="contactme">contact me</li></a>
 				</ul>
 			</div>
 			<div id="submenu">
@@ -61,5 +61,5 @@
 	</div>
 </body>
 <script type="text/javascript" src="js/jquery-min.js"></script>
-<script type="text/javascript" src="js/main-min.js"></script>>
+<script type="text/javascript" src="js/main-min.js"></script>
 </html>
