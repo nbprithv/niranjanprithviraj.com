@@ -41,6 +41,7 @@
 			<div id="mainmenu">
 				<ul>
 					<a href="#twitter"><li id="twitter">twitter</li></a>
+					<a href="#blog"><li id="blog">blog</li></a>
 					<a href="#blogroll"><li id="blogroll">blog roll</li></a>
 					<a href="#foursquare"><li id="foursquare">foursquare</li></a>
 					<a href="#lastfm"><li id="lastfm">last.fm</li></a>

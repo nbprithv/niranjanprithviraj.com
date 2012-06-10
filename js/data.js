@@ -353,3 +353,37 @@ function formatNikePlusJson(data){
 	};
 	}
 }
+function getBlogFeed(){
+	var blogapi = "http://niranjanprithviraj.com/blog/?feed=json&jsonp=storeBlogJson";
+	var newEl = document.createElement('script');
+	newEl.id = 'blogjson';
+	newEl.src=blogapi;
+	document.getElementsByTagName('body')[0].appendChild(newEl);
+}
+function storeBlogJson(data){
+	window.blogJson = data;
+}
+function formatBlogJson(data){
+	var lastfmcolor = ['#B0B0B0','#929396','#CCCCCC'];
+	if(!data){
+		for(var i=0;i < 9;i++){
+			var randomnumber=Math.floor(Math.random()*3);
+			if(i==0)
+			var text = '<li style="background-color:'+lastfmcolor[randomnumber]+';color:#000">Blog is too slow. Can\'t display my recent posts now!</li>';
+			else
+			var text = '<li style="background-color:'+lastfmcolor[randomnumber]+';color:#000"></li>';
+			$('#content #submenu ul').append(text);
+		}
+	}else{
+		var recentposts = data;
+		for(var i=0;i <9;i++){
+			var randomnumber=Math.floor(Math.random()*3);
+			var recentpost = recentposts[i];
+			var finaltext = '<a href="'+recentpost.permalink+'" target="blank">'+
+					'<li style="background-color:'+lastfmcolor[randomnumber]+';color:#000;">'+
+					'<div style="float:left;overflow:none;width:40px;white-space:nowrap;margin-left:5px;">'+recentpost.title+'</div></li>'+
+					'</a>';
+			$('#content #submenu ul').append(finaltext);
+		}
+	}
+}

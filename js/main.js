@@ -4,6 +4,7 @@ $(document).ready(function(){
 	getFourSquareFeed();
 	getFourSquareBadgeJson();
 	getNikePlusFeed();
+	getBlogFeed();
 	if(!location.hash){
 		$("#content #mainmenu #contactme").addClass('selected');	
 		$("#content #submenu #title").html('contact me');
@@ -62,6 +63,9 @@ function tabDisplay(id){
 		break;
 		case 'contactme':
 			getContactMe();
+		break;
+		case 'blog':
+			formatBlogJson(window.blogJson);
 		break;
 		default:
 			return false;
