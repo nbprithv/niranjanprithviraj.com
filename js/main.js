@@ -65,6 +65,8 @@ function tabDisplay(id){
 			getContactMe();
 		break;
 		case 'blog':
+			var blogspan = '<span id="fsoptions" style="text-decoration:underline;"><a href="/blog">go to blog >></a></span>';
+                        $("#content #submenu #title").append(blogspan);
 			formatBlogJson(window.blogJson);
 		break;
 		default:
