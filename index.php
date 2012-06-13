@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Niranjan B Prithviraj</title>
+<meta name="description" content="Niranjan B Prithviraj's personal website. Find my contact information here.">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 <link type="text/css" rel="stylesheet" href="css/styles.css"> 
 <script type="text/javascript">
@@ -36,20 +41,21 @@
 						<span>the <a href="http://en.wikipedia.org/wiki/Krispy_Kreme_Challenge" target="blank">Krispy Kreme run</a> is my favorite sport.</span> |
 					</p>
 				</div>
+				<div class="seperator"></div>
+				<div id="mainmenu">
+					<ul>
+						<a href="#contactme"><li id="contactme">contact me</li></a>
+						<a href="work_history.html"><li id="nikeplus">work history</li></a>
+						<a href="#twitter"><li id="twitter">twitter</li></a>
+						<a href="#blog"><li id="blog">blog</li></a>
+						<a href="#blogroll"><li id="blogroll">blog roll</li></a>
+						<a href="#foursquare"><li id="foursquare">foursquare</li></a>
+						<a href="#lastfm"><li id="lastfm">last.fm</li></a>
+						<a href="#games"><li id="games">games</li></a>
+					</ul>
+				</div>
 			</div>
 			<div class="clear"></div>
-			<div id="mainmenu">
-				<ul>
-					<a href="#twitter"><li id="twitter">twitter</li></a>
-					<a href="#blog"><li id="blog">blog</li></a>
-					<a href="#blogroll"><li id="blogroll">blog roll</li></a>
-					<a href="#foursquare"><li id="foursquare">foursquare</li></a>
-					<a href="#lastfm"><li id="lastfm">last.fm</li></a>
-					<a href="#nikeplus"><li id="nikeplus">nike+</li></a>
-					<a href="#games"><li id="games">games</li></a>
-					<a href="#contactme"><li id="contactme">contact me</li></a>
-				</ul>
-			</div>
 			<div id="submenu">
 				<div id="title"></div>
 				<ul></ul>

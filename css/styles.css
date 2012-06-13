@@ -3,6 +3,7 @@ body{background-image:url('../img/type.png');padding:0px;margin:0px;font-family:
 .clear{clear:both;}
 a{text-decoration:none;color:#B0B0B0;}
 a:hover{text-decoration:underline;}
+#content{margin:0 auto;width:1000px;}
 #content #mainmenu a:hover{text-decoration:none;}
 .clear{clear:both;}
 #nav{background-color:#2d2d2d;width:100%;border-top:5px solid #F74A05;text-align:center;height:25px;}
@@ -13,11 +14,13 @@ a:hover{text-decoration:underline;}
 .wrap{min-height: 100%;height: auto !important;height: 100%;margin: 0 auto -2em;}
 #content .contentbox{width:80%;margin-left:10%;margin-right:10%;opacity:.7;}
 #content .contentbox .innercontent{padding:5px;opacity:1;}
+#content .contentbox .seperator{border-top:1px solid;width:100%;height:1px;}
 #content #aboutme #name{text-align:center;padding-top:10px;font-size:35px;}
 #content #aboutme .innercontent p{text-align:center;}
-#content #mainmenu{float:left;margin-top:35px;}
-#content #mainmenu ul{margin:20px 0px 0px 0px;padding-left:5px;width:150px;}
-#content #mainmenu li{list-style:none;margin:10px;padding:10px;}
+#content #mainmenu{float:left;height:80px;}
+#content #mainmenu ul{margin:20px 0px 0px 0px;padding-left:5px;width:100%;}
+#content #mainmenu a{float:left;}
+#content #mainmenu li{list-style:none;margin:10px;padding:10px;display:inline;}
 #content #mainmenu li:hover{background-color:#2D2D2D;cursor:pointer;}
 #content #mainmenu .selected{background-color:#2D2D2D;}
 #content #submenu{width:900px;height:380px;float:left;}
