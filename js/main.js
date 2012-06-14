@@ -56,6 +56,8 @@ function tabDisplay(id){
 			getGames();
 		break;
 		case 'lastfm':
+			var blogspan = '<span id="fsoptions" style="text-decoration:underline;"><a href="/tools/lastfm.php?userid=nbprithv">lastfm collage</a></span>';
+			$("#content #submenu #title").append(blogspan);
 			formatLastfmJson(window.lastfmJson);
 		break;
 		case 'nikeplus':
@@ -66,7 +68,7 @@ function tabDisplay(id){
 		break;
 		case 'blog':
 			var blogspan = '<span id="fsoptions" style="text-decoration:underline;"><a href="/blog">go to blog >></a></span>';
-                        $("#content #submenu #title").append(blogspan);
+			$("#content #submenu #title").append(blogspan);
 			formatBlogJson(window.blogJson);
 		break;
 		default:
