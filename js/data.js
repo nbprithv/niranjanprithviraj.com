@@ -1,12 +1,17 @@
-function getTwitterFeed(){
-	var twitterapi = "https://api.twitter.com/1/statuses/user_timeline.json?screen_name=nbprithv&count=9&callback=storeTwitterJson";
-	var newEl = document.createElement('script');
-	newEl.id = 'twitterjson';
-	newEl.src=twitterapi;
-	document.getElementsByTagName('body')[0].appendChild(newEl);
+function init(funcCall){
+	$('#loader').show();
+	$('#content #submenu ul').html('');
+	funcCall();
 }
-function storeTwitterJson(data){
-	window.twitterJson = data;
+function getTwitterFeed(){
+	var twitterapi = "https://api.twitter.com/1/statuses/user_timeline.json?screen_name=nbprithv&count=9&callback=formatTwitterJson";
+	$.ajax({url:twitterapi,dataType:'jsonp', jsonpCallback:'formatTwitterJson',
+		success: 
+		function(data) {
+			$('#loader').hide();
+			fadeIn();
+		},
+	});	
 }
 function formatTwitterJson(data){
 	var twittercolor = ['#C3F0F2','#B3ECEF','#9AE4E8','#30D8F0'];
@@ -31,13 +36,13 @@ function formatTwitterJson(data){
 }
 function getLastfmFeed(){
 	var lastfmapi = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=nbprithv&api_key=aaf415a4b8f5917e0f6527203bc4f048&format=json&callback=storeLastfmJson";
-	var newEl = document.createElement('script');
-	newEl.id = 'lasfmjson';
-	newEl.src=lastfmapi;
-	document.getElementsByTagName('body')[0].appendChild(newEl);
-}
-function storeLastfmJson(data){
-	window.lastfmJson = data;
+	$.ajax({url:lastfmapi,dataType:'jsonp', jsonpCallback:'formatLastfmJson',
+		success: 
+		function(data) {
+			$('#loader').hide();
+			fadeIn();
+		},
+	});	
 }
 function formatLastfmJson(data){
 	var lastfmcolor = ['#D01F3C','#D8455D','#929396','#CCCCCC'];
@@ -55,13 +60,26 @@ function formatLastfmJson(data){
 }
 function getFourSquareFeed(){
 	var fsurl = "https://api.foursquare.com/v2/users/self/checkins?oauth_token=WBIGHYBXUYZDYXHCTTDA5VDXQGOSYFMKSQWQVP55B2DDCQEV&limit=9&callback=storeFourSquareJson";
-	var newEl = document.createElement('script');
-	newEl.id = 'foursquarejs';
-	newEl.src=fsurl;
-	document.getElementsByTagName('body')[0].appendChild(newEl);
-}
-function storeFourSquareJson(data){
-	window.foursquareJson = data;
+	$.ajax({url:fsurl,dataType:'jsonp', jsonpCallback:'formatFourSquareJson',
+		success: 
+		function(data) {
+			if(data.meta.code == 500){
+				for(var i=0;i < 9;i++){
+					var randomnumber=Math.floor(Math.random()*4);
+					if(i==0)
+					var text = '<li style="background-color:'+fscolor[randomnumber]+';color:#000">FourSquare doesn\'t want to respond. Try reloading.</li>';
+					else
+					var text = '<li style="background-color:'+fscolor[randomnumber]+';color:#000"></li>';
+					$('#content #submenu ul').append(text);
+				}
+			}else{
+				formatFourSquareJson(data);
+				fadeIn();
+			}
+		},
+		error:function(data){
+		},
+	});	
 }
 function formatFourSquareJson(data){
 	var fscolor = ['#17649A','#40B3DF','#A8CB17','#FAAA00'];
@@ -90,18 +108,33 @@ function formatFourSquareJson(data){
 	}
 }
 function getFourSquareBadgeJson(){
-		var fsbadgeurl = "https://api.foursquare.com/v2/users/self/badges?oauth_token=QQUAF43HGEPHMEZFOHAHAXI5RTUO1F1KOMSSY1LO31HM13E2&v=20120308&callback=storeFSBadgeJson";
-		var newEl = document.createElement('script');
-		newEl.id = 'foursquarebadgejs';
-		newEl.src=fsbadgeurl;
-		document.getElementsByTagName('body')[0].appendChild(newEl);
-}
-function storeFSBadgeJson(data){
-	window.foursquarebadgeJson = data;
+	var fsbadgeurl = "https://api.foursquare.com/v2/users/self/badges?oauth_token=QQUAF43HGEPHMEZFOHAHAXI5RTUO1F1KOMSSY1LO31HM13E2&v=20120308&callback=storeFSBadgeJson";
+	$.ajax({url:fsbadgeurl,dataType:'jsonp', jsonpCallback:'formatFourSquareBadgeJson',
+		success: 
+		function(data) {
+			$('#loader').hide();
+			if(data.meta.code == 500){
+				for(var i=0;i < 9;i++){
+					var randomnumber=Math.floor(Math.random()*4);
+					if(i==0)
+					var text = '<li style="background-color:'+fscolor[randomnumber]+';color:#000">FourSquare doesn\'t want to respond. Try reloading.</li>';
+					else
+					var text = '<li style="background-color:'+fscolor[randomnumber]+';color:#000"></li>';
+					$('#content #submenu ul').append(text);
+				}
+			}else{
+				formatFourSquareBadgeJson(data);
+			}
+			fadeIn();
+		},
+		error: function(){
+			console.log('ddd');
+		}
+	});	
 }
 function formatFourSquareBadgeJson(data){
 	var fscolor = ['#17649A','#40B3DF','#A8CB17','#FAAA00'];
-	if(!data){
+	if(data.meta.code == 500){
 		for(var i=0;i < 9;i++){
 			var randomnumber=Math.floor(Math.random()*4);
 			if(i==0)
@@ -201,6 +234,7 @@ function getGames(){
 			"logo":"background-position: 0 -1121px;"
 		}
 	];
+	$('#loader').hide();
 	for(var i=0;i<games.length;i++){
 		var data = games[i];
 		var text = '';
@@ -214,6 +248,7 @@ function getGames(){
 		'</li></a>';
 		$('#content #submenu ul').append(finaltext);
 	}
+	fadeIn();
 }
 function getContactMe(){
 	var contactme = [
@@ -278,6 +313,7 @@ function getContactMe(){
 			"logo":"background-position: 0 -1463px;"
 		}
 	];
+	$('#loader').hide();
 	for(var i=0;i<contactme.length;i++){
 		var data = contactme[i];
 		var text = '';
@@ -291,6 +327,7 @@ function getContactMe(){
 		'</li></a>';
 		$('#content #submenu ul').append(finaltext);
 	}
+	fadeIn();
 }
 function getNikePlusFeed(){
 	var nikeplusapi = "getdata.php?callback=storeNikePlusJson";
@@ -354,14 +391,14 @@ function formatNikePlusJson(data){
 	}
 }
 function getBlogFeed(){
-	var blogapi = "http://niranjanprithviraj.com/blog/?feed=json&jsonp=storeBlogJson";
-	var newEl = document.createElement('script');
-	newEl.id = 'blogjson';
-	newEl.src=blogapi;
-	document.getElementsByTagName('body')[0].appendChild(newEl);
-}
-function storeBlogJson(data){
-	window.blogJson = data;
+	var blogapi = "http://niranjanprithviraj.com/blog/?feed=json&jsonp=formatBlogJson";
+	$.ajax({url:blogapi,dataType:'jsonp', jsonpCallback:'formatBlogJson',
+		success: 
+		function(data) {
+			$('#loader').hide();
+			fadeIn();
+		},
+	});	
 }
 function formatBlogJson(data){
 	var lastfmcolor = ['#B0B0B0','#929396','#CCCCCC'];

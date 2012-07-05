@@ -1,10 +1,4 @@
 $(document).ready(function(){
-	getTwitterFeed();
-	getLastfmFeed();
-	getFourSquareFeed();
-	getFourSquareBadgeJson();
-	getNikePlusFeed();
-	getBlogFeed();
 	if(!location.hash){
 		$("#content #mainmenu #contactme").addClass('selected');	
 		$("#content #submenu #title").html('contact me');
@@ -23,14 +17,15 @@ $(document).ready(function(){
 		$('#content #submenu ul').html('');
 		$('#content #submenu #fsbadge').removeClass('unselected');
 		$('#content #submenu #fscheckin').addClass('unselected');
-		formatFourSquareBadgeJson(window.foursquarebadgeJson);
+		//formatFourSquareBadgeJson(window.foursquarebadgeJson);
+		init(getFourSquareBadgeJson);
 		fadeIn();
 	});
 	$('#content #submenu #fscheckin').live('click',function(){
 		$('#content #submenu ul').html('');
 		$('#content #submenu #fscheckin').removeClass('unselected');
 		$('#content #submenu #fsbadge').addClass('unselected');
-		formatFourSquareJson(window.foursquareJson);
+		init(getFourSquareFeed);
 		fadeIn();
 	});
 	
@@ -42,39 +37,40 @@ function tabDisplay(id){
 	$("#content #submenu #title").html($('#'+id).html());
 	switch(id){
 		case 'twitter':
-			formatTwitterJson(window.twitterJson);
+			init(getTwitterFeed);
 		break;
 		case 'blogroll':
-			getBlogRoll();
+			init(getBlogRoll);
 		break;
 		case 'foursquare':
 			var fsspan = '<span id="fsoptions"><span id="fscheckin">checkins</span> | <span id="fsbadge" class="unselected">badges</span></span>';
 			$("#content #submenu #title").append(fsspan);	
-			formatFourSquareJson(window.foursquareJson);
+			init(getFourSquareFeed);
 		break;
 		case 'games':
-			getGames();
+			init(getGames);
 		break;
 		case 'lastfm':
 			var blogspan = '<span id="fsoptions" style="text-decoration:underline;"><a href="/tools/lastfm.php?userid=nbprithv">lastfm collage</a></span>';
 			$("#content #submenu #title").append(blogspan);
-			formatLastfmJson(window.lastfmJson);
+			//formatLastfmJson(window.lastfmJson);
+			init(getLastfmFeed);
 		break;
 		case 'nikeplus':
-			formatNikePlusJson(window.nikeplusJson);
+			//formatNikePlusJson(window.nikeplusJson);
 		break;
 		case 'contactme':
-			getContactMe();
+			init(getContactMe);
 		break;
 		case 'blog':
 			var blogspan = '<span id="fsoptions" style="text-decoration:underline;"><a href="/blog">go to blog >></a></span>';
 			$("#content #submenu #title").append(blogspan);
-			formatBlogJson(window.blogJson);
+			//formatBlogJson(window.blogJson);
+			init(getBlogFeed);
 		break;
 		default:
 			return false;
 	}
-	fadeIn();
 }
 function fadeIn(){
 	var eT=0;

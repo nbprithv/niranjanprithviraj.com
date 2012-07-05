@@ -26,9 +26,9 @@
 	<div class="wrap">
 		<div id="nav">
 			<ul>
-				<li>this is not a link</li>
+				<li>copyright &copy; niranjan prithviraj | 2012</li>
 			</ul>
-			<p>this is not text.</p>
+			<p>this is text.</p>
 		</div>
 		<div class="clear"></div>
 		<div id="content">
@@ -48,16 +48,16 @@
 						<a href="work_history.html"><li>work history</li></a>
 						<a href="#twitter"><li id="twitter">twitter</li></a>
 						<a href="#blog"><li id="blog">blog</li></a>
-						<a href="#blogroll"><li id="blogroll">blog roll</li></a>
 						<a href="#foursquare"><li id="foursquare">foursquare</li></a>
 						<a href="#lastfm"><li id="lastfm">last.fm</li></a>
-						<a href="#games"><li id="games">games</li></a>
+						<a href="#games"><li id="games">take a break</li></a>
 					</ul>
 				</div>
 			</div>
 			<div class="clear"></div>
 			<div id="submenu">
 				<div id="title"></div>
+				<div id="loader" style="display:none">loading <img src="img/loader.gif" /></div>
 				<ul></ul>
 			</div>
 			<div class="clear"></div>
@@ -65,7 +65,6 @@
 	</div>
 	<div class="clear"></div>
 	<div id="footer">
-		copyright &copy; niranjan prithviraj | 2012
 	</div>
 </body>
 <script type="text/javascript" src="js/jquery-min.js"></script>
