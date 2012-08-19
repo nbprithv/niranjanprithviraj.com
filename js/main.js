@@ -43,9 +43,12 @@ function tabDisplay(id){
 			init(getBlogRoll);
 		break;
 		case 'foursquare':
-			var fsspan = '<span id="fsoptions"><span id="fscheckin">checkins</span> | <span id="fsbadge" class="unselected">badges</span></span>';
-			$("#content #submenu #title").append(fsspan);	
-			init(getFourSquareFeed);
+//			var fsspan = '<span id="fsoptions"><span id="fscheckin">checkins</span> | <span id="fsbadge" class="unselected">badges</span></span>';
+//			$("#content #submenu #title").append(fsspan);	
+//			init(getFourSquareFeed);
+		break;
+		case 'github':
+			init(getGitHub);
 		break;
 		case 'games':
 			init(getGames);

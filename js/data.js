@@ -259,22 +259,10 @@ function getContactMe(){
 			"logo":"background-position: 0 -570px;"
 		},
 		{
-			"name": "pintrest",
-			"link": "http://pinterest.com/nbprithv/",
-			"style":"background-color:#CC0000;",
-			"logo":"background-position: 0 -1010px;"
-		},
-		{
-			"name": "quora",
-			"link": "http://www.quora.com/Niranjan-B-Prithviraj",
-			"style":"background-color:#A82400;color:#000000",
-			"logo":"background-position: 0 -1235px;"
-		},
-		{
-			"name": "google plus",
-			"link": "https://plus.google.com/u/0/107223123319047956323/posts",
-			"style":"background-color:#D50F0F",
-			"logo":"background-position: 0 -668px;"
+			"name": "github",
+			"link": "http://github.com/nbprithv",
+			"style":"background-color:#F6F6F6;color:#000",
+			"img":"img/github_icon.png"
 		},
 		{
 			"name": "twitter",
@@ -283,28 +271,16 @@ function getContactMe(){
 			"logo":"background-position: 0 -1577px;"
 		},
 		{
-			"name": "facebook",
-			"link": "http://facebook.com/niranjanprithviraj",
-			"style":"background-color:#335795;color:#000",
-			"logo":"background-position: 0 -342px;"
+			"name": "quora",
+			"link": "http://www.quora.com/Niranjan-B-Prithviraj",
+			"style":"background-color:#A82400;color:#000000",
+			"logo":"background-position: 0 -1235px;"
 		},
 		{
 			"name": "linkedin",
 			"link": "http://in.linkedin.com/in/nbprithviraj",
 			"style":"background-color:#247BA7;color:#000",
 			"logo":"background-position: 0 -896px;"
-		},
-		{
-			"name": "foursquare",
-			"link": "https://foursquare.com/nbprithv",
-			"style":"background-color:#40B3DF;color:#000",
-			"logo":"background-position: 0 -456px;"
-		},
-		{
-			"name": "last.fm",
-			"link": "http://www.last.fm/user/nbprithv",
-			"style":"background-color:#C91B4A",
-			"logo":"background-position: 0 -782px;"
 		},
 		{
 			"name": "skype",
@@ -401,25 +377,67 @@ function getBlogFeed(){
 	});	
 }
 function formatBlogJson(data){
-	var lastfmcolor = ['#B0B0B0','#929396','#CCCCCC'];
+	//var lastfmcolor = ['#B0B0B0','#929396','#CCCCCC'];
+	var blogcolor = ['#17649A','#40B3DF','#A8CB17','#FAAA00'];
 	if(!data){
 		for(var i=0;i < 9;i++){
-			var randomnumber=Math.floor(Math.random()*3);
+			var randomnumber=Math.floor(Math.random()*4);
 			if(i==0)
-			var text = '<li style="background-color:'+lastfmcolor[randomnumber]+';color:#000">Blog is too slow. Can\'t display my recent posts now!</li>';
+			var text = '<li style="background-color:'+blogcolor[randomnumber]+';color:#000">Blog is too slow. Can\'t display my recent posts now!</li>';
 			else
-			var text = '<li style="background-color:'+lastfmcolor[randomnumber]+';color:#000"></li>';
+			var text = '<li style="background-color:'+blogcolor[randomnumber]+';color:#000"></li>';
 			$('#content #submenu ul').append(text);
 		}
 	}else{
 		var recentposts = data;
 		for(var i=0;i <9;i++){
-			var randomnumber=Math.floor(Math.random()*3);
+			var randomnumber=Math.floor(Math.random()*4);
 			var recentpost = recentposts[i];
 			var finaltext = '<a href="'+recentpost.permalink+'" target="blank">'+
-					'<li style="background-color:'+lastfmcolor[randomnumber]+';color:#000;">'+
-					'<div style="float:left;overflow:none;width:40px;white-space:nowrap;margin-left:5px;">'+recentpost.title+'</div></li>'+
+					'<li style="background-color:'+blogcolor[randomnumber]+';color:#000;">'+
+					'<div style="float:left;overflow:none;margin-left:5px;">'+recentpost.title+'</div></li>'+
 					'</a>';
+			$('#content #submenu ul').append(finaltext);
+		}
+	}
+}
+function getGitHub(){
+	var blogapi = "http://localhost:8888/niranprithviraj_new/getdata.php?action=github";
+	$.ajax({url:blogapi,dataType:'jsonp', jsonpCallback:'formatGitHubJson',
+		success: 
+		function(data) {
+			$('#loader').hide();
+			fadeIn();
+		},
+	});	
+}
+function formatGitHubJson(data){
+	var githubcolor = ['#F6F6F6'];
+	var githubicons = ['img/github.png','img/github_icon.png','img/github_logo.png'];
+	if(!data){
+		for(var i=0;i < 9;i++){
+			var randomnumber=0;//Math.floor(Math.random()*3);
+			if(i==0)
+			var text = '<li style="background-color:'+githubcolor[randomnumber]+';color:#000">Blog is too slow. Can\'t display my recent posts now!</li>';
+			else
+			var text = '<li style="background-color:'+githubcolor[randomnumber]+';color:#000"></li>';
+			$('#content #submenu ul').append(text);
+		}
+	}else{
+		var recentposts = data;
+		for(var i=0;i <9;i++){
+			var randomnumber=0;//Math.floor(Math.random()*3);
+			var randomnumber_1=Math.floor(Math.random()*3);
+			var recentpost = recentposts[i];
+			var finaltext = '<a href="'+recentpost.permalink+'" target="blank">'+
+					'<li style="background-color:'+githubcolor[randomnumber]+';color:#000;">'+
+					'<div style="float:left;overflow:none;margin-left:5px;">'+recentpost.title+'</div></li>'+
+					'</a>';
+			var finaltext = '<a href="'+recentpost.link+'" target="_blank">'+
+				'<li style="background-color:'+githubcolor[randomnumber]+';color:#000;">'+
+				'<img src="'+githubicons[randomnumber_1]+'" style="border:2px solid #FFF;float:left;height:64px;width:64px;"/>'+
+				'<div style="float:left;width:175px;margin-left:5px;">'+recentpost.title+'</div></li>'+
+				'</a>';
 			$('#content #submenu ul').append(finaltext);
 		}
 	}
