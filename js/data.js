@@ -402,7 +402,7 @@ function formatBlogJson(data){
 	}
 }
 function getGitHub(){
-	var blogapi = "http://localhost:8888/niranprithviraj_new/getdata.php?action=github";
+	var blogapi = "http://niranjanprithviraj.com/getdata.php?action=github";
 	$.ajax({url:blogapi,dataType:'jsonp', jsonpCallback:'formatGitHubJson',
 		success: 
 		function(data) {
