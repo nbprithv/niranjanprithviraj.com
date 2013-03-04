@@ -1,0 +1,159 @@
+body{background-image:url('../img/fabric_of_squares_gray.png');color:#000;}
+#container{color:#000;}
+div.label{
+	float:left;
+	margin:5px 3px;
+}
+.label{
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	padding:4px 6px;
+	color:#FFF;
+	text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25);
+	line-height:15px;
+	font-weight:bold;
+	font-size:13px;
+}
+.label.high{
+	background-color:#b94a48;
+}
+.label.medium{
+	background-color:#F74A05;
+}
+.label.low{
+	background-color:#f89406;
+}
+@media print{
+.label{
+	text-shadow:none;
+	font-weight:normal;
+}
+.label.high{
+	color:#b94a48;
+}
+.label.medium{
+	color:#F74A05;
+}
+.label.low{
+	color:#f89406;
+}
+}
+.clearfix{
+	clear:both;
+}
+#container{
+	margin:auto;
+	background-color:transparent;
+	min-height:120px;
+	width:1024px;
+}
+#r_header{
+	font-size:50px;
+	text-align:center;
+	font-family: 'Julius Sans One';	
+	text-shadow: black 1px 1px 2px;
+}
+#r_header #r_header_title{
+	font-size:24px;
+}
+#r_body{
+}
+#r_lt_column{
+	float:left;
+	width:40%;
+}
+#r_contactme{
+	font-size:14px;
+}
+#r_contactme div{
+	float:left;
+	width:180px;
+}
+#r_contactme i{
+	margin-right:4px;	
+	color:#000;
+}
+#r_contactme a{
+	color:#000;
+}
+#r_contactme a:visited{
+	color:#000;
+}
+#r_rt_column{
+	float:left;
+	width:60%;
+}
+.r_section{
+	padding:22px 22px 0px 22px;
+}
+.r_title{
+	padding:10px;
+	font-size:22px;
+	border-bottom:1px solid #F74A05;
+}
+.r_title i{
+	margin-right:10px;
+}
+.r_timeline{
+	margin-bottom:20px;
+}
+.r_timeline .line{
+	border-bottom: 2px solid #00CED1;
+	width:550px;
+	margin-left:10px;
+}
+.r_uparrow{
+	height:0px;
+	width:0px;
+	width: 0; 
+	height: 0; 
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-bottom: 9px solid #00CED1;
+}
+.r_uparrow.starttime{
+	margin-left:10px;
+}
+.r_uparrow.endtime{
+	margin-right:11px;
+}
+.r_timeline .starttime{
+	float:left;
+}
+.r_timeline .endtime{
+	float:right;
+}
+.r_timeline .starttime,.r_timeline .endtime{
+	font-size:14px;
+}
+.r_content{
+	margin:15px 0px;
+}
+.r_content .r_subtitle p{
+	margin-top:10px;
+	font-family:'Bevan';	
+	font-size:18px;
+	margin-bottom:0px;
+	color:#F74A05;
+}
+.r_content .r_subtitle p i{
+	font-size:18px;
+	margin-bottom:0px;
+}
+.r_content .r_subtitle i{
+	margin-right:6px;
+}
+.r_content .r_subtitle i,.r_content .r_subtitle div,.r_content .r_subtitle a{
+	font-size:12px;
+	color:#000;
+}
+.r_text p{
+	font-size:14px;
+	margin:10px 0px;
+}
+.r_text .r_exp_title{
+	font-size:16px;
+	margin:4px 0px 0px 0px;
+}
+

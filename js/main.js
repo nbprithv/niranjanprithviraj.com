@@ -28,9 +28,14 @@ $(document).ready(function(){
 		init(getFourSquareFeed);
 		fadeIn();
 	});
-	
+	$(window).hashchange(function(){
+		console.log('dddd');
+		var hash = location.hash;
+        tabDisplay(hash.substring(1));
+	});
 });
 function tabDisplay(id){
+console.log(id);
 	$('#content #submenu ul').html('');
 	$('#content #mainmenu li').removeClass('selected');
 	$('#'+id).addClass('selected');	
