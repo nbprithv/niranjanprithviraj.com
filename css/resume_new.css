@@ -16,7 +16,7 @@ div.label{
 	font-size:13px;
 }
 .label.high{
-	background-color:#b94a48;
+	background-color:red;
 }
 .label.medium{
 	background-color:#F74A05;
@@ -24,20 +24,37 @@ div.label{
 .label.low{
 	background-color:#f89406;
 }
+.labelsmall.normal{
+	background-color:#3a87ad;
+}
+.labelsmall{
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	padding:4px 6px;
+	color:#FFF;
+	text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25);
+	line-height:12px;
+	font-weight:bold;
+	font-size:10px;
+}
 @media print{
-.label{
-	text-shadow:none;
-	font-weight:normal;
-}
-.label.high{
-	color:#b94a48;
-}
-.label.medium{
-	color:#F74A05;
-}
-.label.low{
-	color:#f89406;
-}
+	.label,.labelsmall{
+		text-shadow:none;
+		font-weight:normal;
+	}
+	.label.high{
+		color:#b94a48;
+	}
+	.label.medium{
+		color:#F74A05;
+	}
+	.label.low{
+		color:#f89406;
+	}
+	.labelsmall.normal{
+		color:black;
+	}
 }
 .clearfix{
 	clear:both;
@@ -155,5 +172,9 @@ div.label{
 .r_text .r_exp_title{
 	font-size:16px;
 	margin:4px 0px 0px 0px;
+}
+#r_exp_tags div{
+	float:left;
+	margin:4px 4px 4px 0px;
 }
 
