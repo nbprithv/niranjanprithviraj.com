@@ -45,7 +45,7 @@
 				<div id="mainmenu">
 					<ul>
 						<a href="#contactme"><li id="contactme">contact me</li></a>
-						<a href="work_history.html"><li>work history</li></a>
+						<a href="resume.html"><li>work history</li></a>
 						<a href="#github"><li id="github">github</li></a>
 						<a href="#twitter"><li id="twitter">twitter</li></a>
 						<a href="#blog"><li id="blog">blog</li></a>
