@@ -1,13 +1,15 @@
-<!DOCTYPE html>
 <html>
 <head>
-<title>Niranjan B Prithviraj</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Niranjan B Prithviraj's personal website. Find my contact information here.">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.0/pure-min.css">
+<link rel="stylesheet" href="css/newlayout.css">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-<link type="text/css" rel="stylesheet" href="css/styles.css"> 
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -20,53 +22,62 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
-</script> 
+</script>
 </head>
 <body>
-	<div class="wrap">
-		<div id="nav">
-			<ul>
-				<li>copyright &copy; niranjan prithviraj | 2012</li>
-			</ul>
-			<p>this is text.</p>
-		</div>
-		<div class="clear"></div>
-		<div id="content">
-			<div id="aboutme" class="contentbox">
-				<div id="name">Niranjan B Prithviraj</div>
-				<div class="innercontent">
-					<p> |
-						<span>i work at Yahoo!</span> |
-						<span>i make the web faster and fancier.</span> |
-						<span>the <a href="http://en.wikipedia.org/wiki/Krispy_Kreme_Challenge" target="blank">Krispy Kreme run</a> is my favorite sport.</span> |
-					</p>
-				</div>
-				<div class="seperator"></div>
-				<div id="mainmenu">
-					<ul>
-						<a href="#contactme"><li id="contactme">contact me</li></a>
-						<a href="resume.html"><li>work history</li></a>
-						<a href="#github"><li id="github">github</li></a>
-						<a href="#twitter"><li id="twitter">twitter</li></a>
-						<a href="#blog"><li id="blog">blog</li></a>
-						<a href="#lastfm"><li id="lastfm">last.fm</li></a>
-						<a href="#games"><li id="games">take a break</li></a>
-					</ul>
-				</div>
-			</div>
-			<div class="clear"></div>
-			<div id="submenu">
-				<div id="title"></div>
-				<div id="loader" style="display:none">loading <img src="img/loader.gif" /></div>
-				<ul></ul>
-			</div>
-			<div class="clear"></div>
-		</div>
-	</div>
-	<div class="clear"></div>
-	<div id="footer">
-	</div>
+<div id="page" class="pure-g-r">
+  <div class="mobile">
+    <div class="pure-menu-heading">
+      <div class="nav-menu-icon icon"><i class="icon-reorder"></i></div> 
+      <div class="nav-menu-title">Niranjan B Prithviraj</div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <div id="menu" class="pure-menu pure-menu-open pure-menu-horizontal">
+    <ul id="menu-items">
+      <li id="contactme" class="selected">
+        <a href="#contactme"><i class="icon-home"></i>Contact</a>
+      </li>
+      <li id="profile">
+        <a href="http://niranjanprithviraj.com/resume.html"><i class="icon-star"></i>profile</a>
+      </li>
+      <li id="twitter">
+        <a href="#twitter"><i class="icon-twitter"></i>twitter</a>
+      </li>
+      <li id="blog">
+        <a href="#blog"><i class="icon-bookmark"></i>blog</a>
+      </li>
+      <li id="lastfm">
+        <a href="#lastfm"><i class="icon-music"></i>last.fm</a>
+      </li>
+    </ul>
+  </div><!-- horizontal menu -->
+  <div id="main-profile" class="pure-u-1-1">
+    <div id="main-profile-title">
+      Niranjan B Prithviraj
+    </div>
+    <div id="main-profile-summary">
+        i work at Yahoo! i make the web faster and fancier.<span class="cursor-blink"></span>
+    </div>
+  </div>
+  <div id="main-content">
+    <div id="content-title" class="pure-u-1-1">
+    </div>
+    <div class="clearfix"></div>
+    <div id="content" class="pure-u-1-1">
+      <ul></ul>
+    </div>
+  </div><!-- #main-content -->
+  <div class="clearfix"></div>
+  <div id="footer">
+    <span id="footer-text">copyright &copy; niranjan b prithviraj | 2013</span>
+    <span id="footer-icons"><i class="icon-html5"></i><i class="icon-css3"></i></span>
+    <div class="clearfix"></div>
+   </div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="js/jquery-hashchange-min.js"></script>
+<script type="text/javascript" src="js/main-new.js"></script>
+<script type="text/javascript" src="js/data.js"></script>
 </body>
-<script type="text/javascript" src="js/jquery-min.js"></script>
-<script type="text/javascript" src="js/main-min.js"></script>
 </html>
