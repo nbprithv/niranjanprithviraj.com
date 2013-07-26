@@ -5,7 +5,8 @@
   url('seaside-fonts/SEASRN__-webfont.woff') format('woff'),
   url('seaside-fonts/SEASRN__-webfont.ttf') format('truetype');
   font-weight:normal;
-  font-style:normal }
+  font-style:normal 
+}
 body{
   font-family: 'Open Sans', sans-serif,"lucida grande",tahoma,verdana,arial,sans-serif;
   background-image:url('../img/brickwall.png');
@@ -140,4 +141,9 @@ ul.small li{
 }
 .timeline .downarrow.end, .timeline .date.end{
   float:right;
+}
+footer{
+  letter-spacing:0em;
+  font-size:0.6em;
+  font-weight:bold;
 }
