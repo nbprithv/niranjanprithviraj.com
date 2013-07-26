@@ -1,0 +1,143 @@
+@font-face{
+  font-family:'SeaSide';
+  src:url('seaside-fonts/SEASRN__-webfont.eot');
+  src:url('seaside-fonts/SEASRN__-webfont.eot?iefix') format('eot'),
+  url('seaside-fonts/SEASRN__-webfont.woff') format('woff'),
+  url('seaside-fonts/SEASRN__-webfont.ttf') format('truetype');
+  font-weight:normal;
+  font-style:normal }
+body{
+  font-family: 'Open Sans', sans-serif,"lucida grande",tahoma,verdana,arial,sans-serif;
+  background-image:url('../img/brickwall.png');
+}
+body a, body a:visited{
+  text-decoration:none;
+  color:#000000;
+}
+body a:hover{
+  text-decoration:underline;
+}
+header{
+  letter-spacing:0em;
+  margin:1em;
+  margin:auto;
+  text-align:center;
+  font-weight:normal;
+  padding:0.1em;
+}
+section{
+  margin:1em;
+}
+section > section{
+  margin:0.4em;
+}
+section p{
+  margin:0.2em 0;
+  font-size:0.9em;
+}
+section p small{
+  font-size:0.9em;
+}
+h1{
+  font-family:'SeaSide', 'Open Sans', arial;
+  font-size:2.5em;
+  margin:0.2em;
+  color: #fff;
+  text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF, 0 0 15px #FFFFFF, 0 0 20px #56B4EF, 0 0 30px #56B4EF, 0 0 40px #56B4EF, 0 0 50px #56B4EF, 0 0 75px #56B4EF;
+  letter-spacing: 5px;
+}
+h2{
+  font-family:'SeaSide', '';
+  font-size:2em;
+  margin:0.2em;
+  color: #FFFFFF;
+}
+h3{
+  border-bottom:1px solid #F74A05;
+  padding:0.2em;
+  font-weight:normal;
+  font-size:1.3em;
+}
+h4{
+  font-family:'Bevan';
+  color:#F74A05;
+  font-size:1.1em;
+  margin:.4em 0;
+  font-weight:normal;
+}
+h5{
+  font-weight:normal;
+  margin:0;
+  font-size:1em;
+}
+i{
+  margin-right:0.4em;
+  color:#000000;
+}
+ul.inlinelist{
+  padding-left:0;
+  font-size:0.9em;
+}
+ul.inlinelist li{
+  float:left;
+  margin:0.3em;
+  list-style:none;
+}
+ul.inlinelist:after, .timeline:after{
+  content: "."; 
+  visibility: hidden; 
+  display: block; 
+  height: 0; 
+  clear: both;
+}
+ul.buttons li{
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  border-radius:3px;
+  padding:4px 6px;
+  color:#FFF;
+  text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25);
+  line-height:15px;
+  font-weight:bold;
+  font-size:0.9em;
+  background-color:#3a87ad;
+}
+ul.buttons li.high{
+  background-color:red;
+}
+ul.buttons li.medium{
+  background-color:#F74A05;
+}
+ul.small li{
+  font-size:0.7em;
+  font-weight:normal;
+  letter-spacing:0.1em;
+}
+.timeline{
+  margin:0 0 0.4em 0;
+}
+.timeline, .timeline .line{
+  width:100%;
+}
+.timeline .line{
+  height:1px;
+  background-color:#00CED1;
+}
+.downarrow{
+  height:0px;
+  width:0px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 9px solid #00CED1;
+}
+.timeline .date{
+  font-size:0.8em;
+}
+.timeline .downarrow.start, .timeline .date.start{
+  float:left;
+}
+.timeline .downarrow.end, .timeline .date.end{
+  float:right;
+}

@@ -1,6 +1,6 @@
 function init(funcCall){
 	$('#loader').show();
-	$('#content #submenu ul').html('');
+	$(window.cardContentDiv).html('');
 	funcCall();
 }
 function getTwitterFeed(){
@@ -22,7 +22,7 @@ function formatTwitterJson(data){
 			var text = '<li style="background-color:'+twittercolor[randomnumber]+';color:#000">Twitter screwed me over. Can\'t display tweets now!</li>';
 			else
 			var text = '<li style="background-color:'+twittercolor[randomnumber]+';color:#000"></li>';
-			$('#content #submenu ul').append(text);
+			$(window.cardContentDiv).append(text);
 		}
 	}else{
 	for(var i=0;i < data.length;i++){
@@ -30,7 +30,7 @@ function formatTwitterJson(data){
 		var tweet = data[i];
 		var statusurl = "http://twitter.com/nbprithv/status/";
 		var finaltext = '<a href="'+statusurl+tweet.id_str+'" target="blank"><li style="background-color:'+twittercolor[randomnumber]+';color:#000">'+tweet.text+'</li></a>';
-		$('#content #submenu ul').append(finaltext);
+		$(window.cardContentDiv).append(finaltext);
 	};
 	}
 }
@@ -51,11 +51,11 @@ function formatLastfmJson(data){
 		var randomnumber=Math.floor(Math.random()*4);
 		var recenttrack = recenttracks[i];
 		var finaltext = '<a href="'+recenttrack.url+'" target="blank">'+
-				'<li style="background-color:'+lastfmcolor[randomnumber]+';color:#000;">'+
+				'<li style="background-color:'+lastfmcolor[randomnumber]+';">'+
 				'<img src="'+recenttrack.image[1]['#text']+'" style="border:2px solid #FFF;float:left;"/>'+
-				'<div style="float:left;overflow:none;width:40px;white-space:nowrap;margin-left:5px;">'+recenttrack.name+'</div></li>'+
+				'<div style="float:left;overflow:none;width:10em;overflow:hidden;white-space:nowrap;margin-left:5px;">'+recenttrack.name+'</div></li>'+
 				'</a>';
-		$('#content #submenu ul').append(finaltext);
+		$(window.cardContentDiv).append(finaltext);
 	};
 }
 function getFourSquareFeed(){
@@ -70,7 +70,7 @@ function getFourSquareFeed(){
 					var text = '<li style="background-color:'+fscolor[randomnumber]+';color:#000">FourSquare doesn\'t want to respond. Try reloading.</li>';
 					else
 					var text = '<li style="background-color:'+fscolor[randomnumber]+';color:#000"></li>';
-					$('#content #submenu ul').append(text);
+					$(window.cardContentDiv).append(text);
 				}
 			}else{
 				formatFourSquareJson(data);
@@ -89,8 +89,8 @@ function formatFourSquareJson(data){
 			if(i==0)
 			var text = '<li style="background-color:'+fscolor[randomnumber]+';color:#000">FourSquare doesn\'t want to respond. Try reloading.</li>';
 			else
-			var text = '<li style="background-color:'+fscolor[randomnumber]+';color:#000"></li>';
-			$('#content #submenu ul').append(text);
+			var text = '<li style="background-color:'+fscolor[randomnumber]+';"></li>';
+			$(window.cardContentDiv).append(text);
 		}
 	}else{
 	var recentcheckins = data.response.checkins.items;
@@ -103,7 +103,7 @@ function formatFourSquareJson(data){
 		var finaltext = '<li style="background-color:'+fscolor[randomnumber]+'">'+
 		icon+
 		'<div style="float:left;overflow:none;width:40px;white-space:nowrap;margin-left:5px;color:#000">'+checkin.venue.name+'</div></li>';
-		$('#content #submenu ul').append(finaltext);
+		$(window.cardContentDiv).append(finaltext);
 	};
 	}
 }
@@ -120,7 +120,7 @@ function getFourSquareBadgeJson(){
 					var text = '<li style="background-color:'+fscolor[randomnumber]+';color:#000">FourSquare doesn\'t want to respond. Try reloading.</li>';
 					else
 					var text = '<li style="background-color:'+fscolor[randomnumber]+';color:#000"></li>';
-					$('#content #submenu ul').append(text);
+					$(window.cardContentDiv).append(text);
 				}
 			}else{
 				formatFourSquareBadgeJson(data);
@@ -141,7 +141,7 @@ function formatFourSquareBadgeJson(data){
 			var text = '<li style="background-color:'+fscolor[randomnumber]+';color:#000">FourSquare doesn\'t want to respond. Try reloading.</li>';
 			else
 			var text = '<li style="background-color:'+fscolor[randomnumber]+';color:#000"></li>';
-			$('#content #submenu ul').append(text);
+			$(window.cardContentDiv).append(text);
 		}
 	}else{
 	var allbadges = data.response.sets.groups[0].items;
@@ -153,7 +153,7 @@ function formatFourSquareBadgeJson(data){
 		var finaltext = '<li style="background-color:'+fscolor[randomnumber]+'">'+
 		'<img src="'+badgeimg+'" style="float:left"/>'+
 		'<div style="float:left;overflow:none;width:40px;white-space:nowrap;margin-left:5px;color:#000">'+badgehash.name+'</div></li>';
-		$('#content #submenu ul').append(finaltext);
+		$(window.cardContentDiv).append(finaltext);
 	}	
 	}
 }
@@ -204,7 +204,7 @@ function getBlogRoll(){
 		var finaltext = '<a href="'+data.link+'" target="blank"><li style="'+data.style+'">'+
 		text+
 		'</li></a>';
-		$('#content #submenu ul').append(finaltext);
+		$(window.cardContentDiv).append(finaltext);
 	}
 }
 function getGames(){
@@ -246,7 +246,7 @@ function getGames(){
 		var finaltext = '<a href="'+data.link+'" target="blank"><li style="'+data.style+'">'+
 		text+
 		'</li></a>';
-		$('#content #submenu ul').append(finaltext);
+		$(window.cardContentDiv).append(finaltext);
 	}
 	fadeIn();
 }
@@ -255,7 +255,7 @@ function getContactMe(){
 		{
 			"name": "gmail",
 			"link": "mailto:niranjan.prithviraj@gmail.com",
-			"style":"background-color:#1878C0;color:#000;",
+			"style":"background-color:#1878C0;color:#FFF;",
 			"logo":"background-position: 0 -570px;"
 		},
 		{
@@ -267,19 +267,19 @@ function getContactMe(){
 		{
 			"name": "twitter",
 			"link": "http://twitter.com/nbprithv",
-			"style":"background-color:#4099FF;color:#000",
+			"style":"background-color:#4099FF;color:#FFF",
 			"logo":"background-position: 0 -1577px;"
 		},
 		{
 			"name": "quora",
 			"link": "http://www.quora.com/Niranjan-B-Prithviraj",
-			"style":"background-color:#A82400;color:#000000",
+			"style":"background-color:#A82400;color:#FFF",
 			"logo":"background-position: 0 -1235px;"
 		},
 		{
 			"name": "linkedin",
 			"link": "http://in.linkedin.com/in/nbprithviraj",
-			"style":"background-color:#247BA7;color:#000",
+			"style":"background-color:#247BA7;color:#FFF",
 			"logo":"background-position: 0 -896px;"
 		},
 		{
@@ -301,7 +301,7 @@ function getContactMe(){
 		var finaltext = '<a href="'+data.link+'" target="blank"><li style="'+data.style+'">'+
 		text+
 		'</li></a>';
-		$('#content #submenu ul').append(finaltext);
+		$(window.cardContentDiv).append(finaltext);
 	}
 	fadeIn();
 }
@@ -324,7 +324,7 @@ function formatNikePlusJson(data){
 			var text = '<li style="background-color:'+nikepluscolor[randomnumber]+';color:#000">Nike+ is too slow. Can\'t display my runs now!</li>';
 			else
 			var text = '<li style="background-color:'+nikepluscolor[randomnumber]+';color:#000"></li>';
-			$('#content #submenu ul').append(text);
+			$(window.cardContentDiv).append(text);
 		}
 	}else{
 	var runs = data.runList.run;
@@ -345,9 +345,9 @@ function formatNikePlusJson(data){
 	var totalcalories = '<li style="background-color:#FFF;color:#000">'+
 			'<img src="img/fire.png" style="border:2px solid #FFF;float:left;" height="64px" width="64px"/>'+
 			'<div style="margin-left:5px;float:left"><div>calories burnt</div><div>'+data.runListSummary.calories+'</div></div></li>';
-	$('#content #submenu ul').append(totaldistance);
-	$('#content #submenu ul').append(totaltime);
-	$('#content #submenu ul').append(totalcalories);
+	$(window.cardContentDiv).append(totaldistance);
+	$(window.cardContentDiv).append(totaltime);
+	$(window.cardContentDiv).append(totalcalories);
 	while(j<6){
 		var randomnumber=Math.floor(Math.random()*4);
 		var run = runs[i];
@@ -360,7 +360,7 @@ function formatNikePlusJson(data){
 		var finaltext = '<li style="background-color:'+nikepluscolor[randomnumber]+';color:#000">'+
 				'<img src="img/nikeplus.png" style="float:left;"/>'+
 				'<div style="margin-left:5px;float:left"><div>'+distance+' km</div><div>'+minutes+' minutes</div></div></li>';
-		$('#content #submenu ul').append(finaltext);
+		$(window.cardContentDiv).append(finaltext);
 		i--;
 		j++;
 	};
@@ -385,8 +385,8 @@ function formatBlogJson(data){
 			if(i==0)
 			var text = '<li style="background-color:'+blogcolor[randomnumber]+';color:#000">Blog is too slow. Can\'t display my recent posts now!</li>';
 			else
-			var text = '<li style="background-color:'+blogcolor[randomnumber]+';color:#000"></li>';
-			$('#content #submenu ul').append(text);
+			var text = '<li style="background-color:'+blogcolor[randomnumber]+';"></li>';
+			$(window.cardContentDiv).append(text);
 		}
 	}else{
 		var recentposts = data;
@@ -397,7 +397,7 @@ function formatBlogJson(data){
 					'<li style="background-color:'+blogcolor[randomnumber]+';color:#000;">'+
 					'<div style="float:left;overflow:none;margin-left:5px;">'+recentpost.title+'</div></li>'+
 					'</a>';
-			$('#content #submenu ul').append(finaltext);
+			$(window.cardContentDiv).append(finaltext);
 		}
 	}
 }
@@ -421,7 +421,7 @@ function formatGitHubJson(data){
 			var text = '<li style="background-color:'+githubcolor[randomnumber]+';color:#000">Blog is too slow. Can\'t display my recent posts now!</li>';
 			else
 			var text = '<li style="background-color:'+githubcolor[randomnumber]+';color:#000"></li>';
-			$('#content #submenu ul').append(text);
+			$(window.cardContentDiv).append(text);
 		}
 	}else{
 		var recentposts = data;
@@ -438,7 +438,7 @@ function formatGitHubJson(data){
 				'<img src="'+githubicons[randomnumber_1]+'" style="border:2px solid #FFF;float:left;height:64px;width:64px;"/>'+
 				'<div style="float:left;width:175px;margin-left:5px;">'+recentpost.title+'</div></li>'+
 				'</a>';
-			$('#content #submenu ul').append(finaltext);
+			$(window.cardContentDiv).append(finaltext);
 		}
 	}
 }
