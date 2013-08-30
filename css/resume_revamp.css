@@ -40,15 +40,15 @@ section p small{
   font-size:0.9em;
 }
 h1{
-  font-family:'SeaSide', 'Open Sans', arial;
+  font-family: josefin-slab, serif;
   font-size:2.5em;
   margin:0.2em;
-  color: #fff;
-  text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF, 0 0 15px #FFFFFF, 0 0 20px #56B4EF, 0 0 30px #56B4EF, 0 0 40px #56B4EF, 0 0 50px #56B4EF, 0 0 75px #56B4EF;
+  color:white;
+  text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25);
   letter-spacing: 5px;
 }
 h2{
-  font-family:'SeaSide', '';
+  font-family: josefin-slab, serif;
   font-size:2em;
   margin:0.2em;
   color: #FFFFFF;

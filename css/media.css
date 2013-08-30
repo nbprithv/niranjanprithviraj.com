@@ -1,0 +1,22 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 767px) {
+/* Styles */
+  .header-contact div{font-size:1.8em;}
+  .know-more p{font-size:1.8em;}
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) {
+/* Styles */
+  .header-contact div{font-size:2.2em;}
+  .know-more p{font-size:2.2em;}
+}
+@media only screen 
+and (max-width : 1023px) {
+  header{padding:1em 0.8em;}
+  .header-info, .header-contact { width:100%;float:none;}
+  .header-contact .contact-list{float:none;}
+}
