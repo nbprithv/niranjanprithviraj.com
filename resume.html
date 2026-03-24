@@ -1,213 +1,337 @@
-<html>
+<!DOCTYPE html>
+<!--
+  ══════════════════════════════════════════════════════════════
+  NIRANJAN B PRITHVIRAJ — Resume
+  Written with semantic HTML in mind.
+  If you spot something to improve, reach out:
+  niranjan.prithviraj@gmail.com
+  ══════════════════════════════════════════════════════════════
+-->
+<html lang="en">
 <head>
-  <!--
-  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                                                              NIRANJAN B PRITHVIRAJ
-   If you came here before you read the footer, good for you! If you didn't I'm glad you came to check this out.
-   This page was written with symantic web in mind. If you see something that I can do better, please let me know.
-   You can email me at niranjan DOT prithviraj AT gmail.com
-   This page was rewritten from this page niranjanprithviraj.com/resume.html.old
-   By rewritting the HTML, I've saved close to 25KB. 
-
-   That may not be a lot for this page.
-   But if you are Yahoo! or Google or Facebook that can translate to millions of $$ in network bandwidth costs.
-  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  -->
-  <title>Resume</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Niranjan B Prithviraj's official resume.">
-  <meta http-equiv="content-type" content="text/html;charset=UTF-8">
-  <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.1/pure-min.css">
-  <link type="text/css" rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-  <link type="text/css" rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
-  <script src="http://use.edgefonts.net/josefin-slab.js"></script>
-  <link type="text/css" rel="stylesheet" href="css/resume_revamp.css">
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Niranjan B Prithviraj's resume — Front End Engineer.">
+  <meta name="robots" content="index, follow">
+  <title>Resume — Niranjan B Prithviraj</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/resume-modern.css">
 </head>
 <body>
-<div class="pure-g-r">
-  <div class="pure-u-1-1" style="background-color:black;">
-    <header>
-      <h1>Niranjan B Prithviraj</h1>
-      <h2>Front End Engineer</h2>
-    </header>
+
+  <!-- ─── Top bar ──────────────────────────────────────────── -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a href="/" class="topbar-back" aria-label="Back to home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M19 12H5M12 5l-7 7 7 7"/>
+        </svg>
+        <span>niranjanprithviraj.com</span>
+      </a>
+      <div class="topbar-actions">
+        <button class="btn-sm btn-sm-outline" onclick="window.print()" aria-label="Print resume">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 6 2 18 2 18 9"/>
+            <path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/>
+            <rect x="6" y="14" width="12" height="8"/>
+          </svg>
+          Print
+        </button>
+      </div>
+    </div>
   </div>
-  <div class="pure-u-1-3">
-    <section class="aboutme">
-      <h3><i class="icon-user"></i>About me</h3>
-      <p>I work with an ecommerce platform, processing millions of dollars of orders a day. My job is to make sure people find things simple, easy to use and, responsive. I predominantly work with front end technologies, but regulary get my hands dirty with C++. Over the years I've worked with systems of medium to large scale. I've deployed applications on the cloud with AWS and maintained my own dedicated servers.</p>
-      <p>You can find more about me here</p>
-      <ul class="inlinelist">
-        <li><i class="icon-github-alt"></i><a href="https://github.com/nbprithv">nbprithv</a></li>
-        <li><i class="icon-twitter-sign"></i><a href="https://twitter.com/nbprithv">nbprithv</a></li>
-        <li><i class="icon-linkedin"></i><a href="http://in.linkedin.com/in/nbprithviraj/">Niranjan B Prithviraj</a></li>
-        <li><i class="icon-sign-blank"></i><a href="http://niranjanprithviraj.com/">niranjanprithviraj.com</a></li>
-      </ul>
-    </section>
-    <section class="coolstuff">
-      <h3><i class="icon-magic"></i>Cool Stuff</h3>
-      <section>
-        <h4><i class="icon-cog"></i>YUI3/jQuery Plugin</h4>
-        <p><small><i class="icon-link"></i><a href="http://nbprithv.github.com/introtour-ui">http://nbprithv.github.com/introtour-ui/</a></small></p>
-        <p><small><i class="icon-time"></i>Mar 2013</small></p>
+
+  <div class="resume-wrapper">
+
+    <!-- ─── Sidebar ────────────────────────────────────────── -->
+    <aside class="resume-sidebar" aria-label="About and background">
+
+      <p class="resume-name">Niranjan B<br>Prithviraj</p>
+      <p class="resume-role">Front End Engineer</p>
+
+      <!-- About -->
+      <section class="sidebar-section" aria-labelledby="sidebar-about">
+        <h2 class="sidebar-title" id="sidebar-about">About</h2>
+        <p class="sidebar-text">
+          I work with an e-commerce platform processing millions of dollars of orders
+          a day. My job is to make sure things are simple, easy to use, and responsive.
+          I predominantly work with front-end technologies, but regularly get my hands dirty
+          with C++.
+        </p>
       </section>
-      <section>
-        <h4><i class="icon-trophy"></i>Yahoo! Open Hack Day Winner</h4>
-        <p><small><i class="icon-link"></i><a href="http://developer.yahoo.com/hacku/hackuhandler.php?appid=hacku&op=showhack&hackid=3857">YDN entry http://yhoo.it/WyUkhR</a></small></p>
-        <p><small><i class="icon-time"></i>Jun 2011</small></p>
-      </section>
-      <section>
-        <h4><i class="icon-trophy"></i>Yahoo! Open Hack Day Winner</h4>
-        <p><small><i class="icon-link"></i><a href="http://developer.yahoo.com/hacku/hackuhandler.php?appid=us&op=showhack&hackid=109">YDN entry http://yhoo.it/Z5RFsu</a></small></p>
-        <p><i class="icon-time"></i>Feb 2009</p>
-      </section>
-      <section>
-        <h4><i class="icon-file-alt"></i>IEEE Publication</h4>
-        <p><small><i class="icon-link"></i><a href="http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=4290655&url=http%3A%2F%2Fieeexplore.ieee.org%2Fiel5%2F4290630%2F4290631%2F04290655.pdf%3Farnumber%3D4290655">IEEE Explore http://bit.ly/Z5TANC</a></small></p>
-        <p><small><i class="icon-time"></i> Dec 2006</small></p>
-      </section>
-    </section>
-    <section>
-      <h3><i class="icon-book"></i>Education</h3>
-      <section>
-        <h4>North Carolina State University</h4>
-        <p><small><i class="icon-certificate"></i>Masters in Computer Science</small></p>
-        <p><small><i class="icon-time"></i>Aug 2007 - Dec 2008</small></p>
-      </section>
-      <section>
-        <h4>Anna University</h4>
-        <p><small><i class="icon-certificate"></i>Bachelors in Computer Science</small></p>
-        <p><small><i class="icon-time"></i>Aug 2003 - May 2007</small></p>
-      </section>
-    </section>
-  </div>
-  <div class="pure-u-2-3">
-    <section>
-      <h3><i class=" icon-cogs"></i>Skills</h3>
-      <ul class="inlinelist buttons">
-        <li class="high">JavaScript</li>
-        <li class="high">YUI</li>
-        <li class="high">jQuery</li>
-        <li class="high">PHP</li>
-        <li class="high">Perl</li>
-        <li class="medium">NodeJS</li>
-        <li class="medium">Mojito</li>
-        <li class="medium">ExpressJS</li>
-        <li class="medium">YQL</li>
-        <li class="medium">Catalyst</li>
-        <li class="medium">AWS</li>
-        <li class="medium">Scalr</li>
-      </ul>
-    </section>
-    <section>
-      <h3><i class="icon-laptop"></i>Experience</h3>
-      <section>
-        <h4>Yahoo!</h4>
-        <div class="timeline">
-          <div class="line"></div>
-          <div class="downarrow start"></div>
-          <div class="downarrow end"></div>
-          <div style="clear:both"></div>
-          <div class="date start">Oct, 2011</div>
-          <div class="date end">Present</div>
+
+      <!-- Links -->
+      <section class="sidebar-section" aria-labelledby="sidebar-links">
+        <h2 class="sidebar-title" id="sidebar-links">Find me</h2>
+        <div class="sidebar-links">
+          <a href="https://github.com/nbprithv" class="sidebar-link" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+            </svg>
+            github.com/nbprithv
+          </a>
+          <a href="https://twitter.com/nbprithv" class="sidebar-link" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+            @nbprithv
+          </a>
+          <a href="https://linkedin.com/in/nbprithviraj" class="sidebar-link" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            linkedin.com/in/nbprithviraj
+          </a>
+          <a href="http://niranjanprithviraj.com" class="sidebar-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+            </svg>
+            niranjanprithviraj.com
+          </a>
         </div>
-        <h5>Sr. Software Engineer</h5>
-        <p><small><i class="icon-link"></i><a href="http://smallbusiness.yahoo.com/">http://smallbusiness.yahoo.com/</a></small></p>
-        <p><small><i class="icon-group"></i> > 10000 Employees</small></p>
-        <ul class="inlinelist buttons small">
-          <li>JavaScript</li>
-          <li>YUI</li>
-          <li>PHP</li>
-          <li>Perl</li>
-          <li>C++</li>
-          <li>NodeJS</li>
-          <li>Mojito</li>
-          <li>Cache Servers</li>
-        </ul>
-        <p>At Yahoo! I work with the e-commerce platform that allows small business owners to sell online. On a daily basis we deal with 10000s of merchants, their millions of customers and transact 10's of millions of dollars. It's my job to make sure the platform is simple, easy to use and as fast as possible.</p>
-        <p>I deal with all parts of the front-end of the platform and also design & build solutions that improve performance of the system.</p>
       </section>
-      <section>
-        <h4>NuVeda Learning Pvt. Ltd.</h4>
-        <div class="timeline">
-          <div class="line"></div>
-          <div class="downarrow start"></div>
-          <div class="downarrow end"></div>
-          <div style="clear:both"></div>
-          <div class="date start">Mar, 2009</div>
-          <div class="date end">Oct, 2011</div>
+
+      <!-- Education -->
+      <section class="sidebar-section" aria-labelledby="sidebar-edu">
+        <h2 class="sidebar-title" id="sidebar-edu">Education</h2>
+
+        <div class="edu-item">
+          <p class="edu-school">North Carolina State University</p>
+          <p class="edu-degree">Masters in Computer Science</p>
+          <p class="edu-date">Aug 2007 – Dec 2008</p>
         </div>
-        <h5>Product Engineer</h5>
-        <p><small><i class="icon-link"></i><a href="http://nuvedalearning.com/">http://nuvedalearning.com/</a></small></p>
-        <p><small><i class="icon-group"></i>10-50 Employees</small></p>
-        <ul class="inlinelist buttons small">
-          <li>JavaScript</li>
-          <li>jQuery</li>
-          <li>PHP</li>
-          <li>Perl</li>
-          <li>Catalyst</li>
-          <li>AWS</li>
-          <li>Scalr</li>
-        </ul>
-        <p>Built from scratch an application, that allowed users to learn collaboratively and share. It can be thought of as a <i>Facebook meets Quora</i> sort of application. It was SaaS based and allowed for customization.</p>
-        <p>Also delivered, a learning management system on an auto-scaling, auto-curing environment, for Sony. This system was used for internal trainings and allowed for thousands of concurrent users. </p>
-      </section>
-      <section>
-        <h4>Advanced Energy</h4>
-        <div class="timeline">
-          <div class="line"></div>
-          <div class="downarrow start"></div>
-          <div class="downarrow end"></div>
-          <div style="clear:both"></div>
-          <div class="date start">May, 2008</div>
-          <div class="date end">Aug, 2008</div>
+
+        <div class="edu-item">
+          <p class="edu-school">Anna University</p>
+          <p class="edu-degree">Bachelors in Computer Science</p>
+          <p class="edu-date">Aug 2003 – May 2007</p>
         </div>
-        <h5>IT Intern</h5>
-        <p><small><i class="icon-link"></i><a href="http://www.advancedenergy.org/">http://www.advancedenergy.org/</a></small></p>
-        <p><small><i class="icon-group"></i> &gt; 50 Employees</small></p>
-        <ul class="inlinelist buttons small">
-          <li>JavaScript</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>PHP</li>
-        </ul>
-        <p>I extended existing applications that monitor power consumption at homes, schools and industries in the area. The application generated graphical data. I also built tools for the intra-net.</p>
       </section>
-      <section>
-        <h4>ITECS, North Carolina State University</h4>
-        <div class="timeline">
-          <div class="line"></div>
-          <div class="downarrow start"></div>
-          <div class="downarrow end"></div>
-          <div style="clear:both"></div>
-          <div class="date start">Jan-May, 2008</div>
-          <div class="date end">Aug-Dec, 2008</div>
+
+      <!-- Cool Stuff -->
+      <section class="sidebar-section" aria-labelledby="sidebar-cool">
+        <h2 class="sidebar-title" id="sidebar-cool">Highlights</h2>
+
+        <div class="cool-item">
+          <div class="cool-badge cool-badge--plugin">Plugin</div>
+          <p class="cool-item-title">YUI3/jQuery Plugin</p>
+          <p class="cool-item-date">Mar 2013</p>
+          <a href="http://nbprithv.github.com/introtour-ui/" class="cool-item-link" target="_blank" rel="noopener noreferrer">
+            nbprithv.github.com/introtour-ui
+          </a>
         </div>
-        <h5>Web Developer</h5>
-        <p><small><i class="icon-link"></i><a href="http://www.itecs.ncsu.edu/">http://www.itecs.ncsu.edu/</a></small></p>
-        <p><small><i class="icon-group"></i> 10-50 Employees</small></p>
-        <ul class="inlinelist buttons small">
-          <li>JavaScript</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>PHP</li>
-        </ul>
-        <p>The type of applications I built, ranged from web based simulation models for student's theory papers to photo uploaders.</p>
+
+        <div class="cool-item">
+          <div class="cool-badge cool-badge--trophy">🏆 Winner</div>
+          <p class="cool-item-title">Yahoo! Open Hack Day</p>
+          <p class="cool-item-date">Jun 2011</p>
+          <a href="http://yhoo.it/WyUkhR" class="cool-item-link" target="_blank" rel="noopener noreferrer">
+            yhoo.it/WyUkhR
+          </a>
+        </div>
+
+        <div class="cool-item">
+          <div class="cool-badge cool-badge--trophy">🏆 Winner</div>
+          <p class="cool-item-title">Yahoo! Open Hack Day</p>
+          <p class="cool-item-date">Feb 2009</p>
+          <a href="http://yhoo.it/Z5RFsu" class="cool-item-link" target="_blank" rel="noopener noreferrer">
+            yhoo.it/Z5RFsu
+          </a>
+        </div>
+
+        <div class="cool-item">
+          <div class="cool-badge cool-badge--paper">IEEE Paper</div>
+          <p class="cool-item-title">IEEE Publication</p>
+          <p class="cool-item-date">Dec 2006</p>
+          <a href="http://bit.ly/Z5TANC" class="cool-item-link" target="_blank" rel="noopener noreferrer">
+            bit.ly/Z5TANC
+          </a>
+        </div>
+
       </section>
-    </section>
-  </div>
-  <div class="pure-u-1-1">
-    <footer>
-      <p><i class="icon-html5"></i><i class="icon-css3"></i>If you really want to know someone, go to the source.</p>
-    </footer>
-  </div>
-</div>
+
+    </aside>
+
+    <!-- ─── Main Content ────────────────────────────────────── -->
+    <main class="resume-main" aria-label="Skills and experience">
+
+      <!-- Skills -->
+      <section class="main-section" aria-labelledby="main-skills">
+        <h2 class="main-section-title" id="main-skills">Skills</h2>
+        <div class="skills-main">
+          <span class="skill-pill skill-pill--high">JavaScript</span>
+          <span class="skill-pill skill-pill--high">YUI</span>
+          <span class="skill-pill skill-pill--high">jQuery</span>
+          <span class="skill-pill skill-pill--high">PHP</span>
+          <span class="skill-pill skill-pill--high">Perl</span>
+          <span class="skill-pill skill-pill--medium">NodeJS</span>
+          <span class="skill-pill skill-pill--medium">Mojito</span>
+          <span class="skill-pill skill-pill--medium">ExpressJS</span>
+          <span class="skill-pill skill-pill--medium">YQL</span>
+          <span class="skill-pill skill-pill--medium">Catalyst</span>
+          <span class="skill-pill skill-pill--medium">AWS</span>
+          <span class="skill-pill skill-pill--medium">Scalr</span>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section class="main-section" aria-labelledby="main-exp">
+        <h2 class="main-section-title" id="main-exp">Experience</h2>
+
+        <!-- Yahoo! -->
+        <article class="exp-item">
+          <div class="exp-dot" aria-hidden="true"></div>
+
+          <h3 class="exp-company">Yahoo!</h3>
+          <div class="exp-meta">
+            <span class="exp-role">Sr. Software Engineer</span>
+            <span class="exp-dates">Oct 2011 – Present</span>
+          </div>
+
+          <a href="http://smallbusiness.yahoo.com/" class="exp-link" target="_blank" rel="noopener noreferrer">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+            smallbusiness.yahoo.com
+          </a>
+
+          <div class="exp-tech">
+            <span class="exp-tag">JavaScript</span>
+            <span class="exp-tag">YUI</span>
+            <span class="exp-tag">PHP</span>
+            <span class="exp-tag">Perl</span>
+            <span class="exp-tag">C++</span>
+            <span class="exp-tag">NodeJS</span>
+            <span class="exp-tag">Mojito</span>
+            <span class="exp-tag">Cache Servers</span>
+          </div>
+
+          <p class="exp-desc">
+            At Yahoo! I work with the e-commerce platform that allows small business owners to sell online.
+            On a daily basis we deal with tens of thousands of merchants, their millions of customers,
+            and transact tens of millions of dollars. My job is to make sure the platform is simple,
+            easy to use, and as fast as possible.
+          </p>
+          <p class="exp-desc">
+            I work across all parts of the front-end and also design and build solutions that improve
+            the overall performance of the system.
+          </p>
+        </article>
+
+        <!-- NuVeda -->
+        <article class="exp-item">
+          <div class="exp-dot" aria-hidden="true"></div>
+
+          <h3 class="exp-company">NuVeda Learning Pvt. Ltd.</h3>
+          <div class="exp-meta">
+            <span class="exp-role">Product Engineer</span>
+            <span class="exp-dates">Mar 2009 – Oct 2011</span>
+          </div>
+
+          <a href="http://nuvedalearning.com/" class="exp-link" target="_blank" rel="noopener noreferrer">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+            nuvedalearning.com
+          </a>
+
+          <div class="exp-tech">
+            <span class="exp-tag">JavaScript</span>
+            <span class="exp-tag">jQuery</span>
+            <span class="exp-tag">PHP</span>
+            <span class="exp-tag">Perl</span>
+            <span class="exp-tag">Catalyst</span>
+            <span class="exp-tag">AWS</span>
+            <span class="exp-tag">Scalr</span>
+          </div>
+
+          <p class="exp-desc">
+            Built from scratch an application that allowed users to learn collaboratively and share —
+            think <em>Facebook meets Quora</em>. It was SaaS-based and allowed full customization.
+          </p>
+          <p class="exp-desc">
+            Also delivered a learning management system on an auto-scaling, auto-healing environment
+            for Sony, used for internal training with support for thousands of concurrent users.
+          </p>
+        </article>
+
+        <!-- Advanced Energy -->
+        <article class="exp-item">
+          <div class="exp-dot" aria-hidden="true"></div>
+
+          <h3 class="exp-company">Advanced Energy</h3>
+          <div class="exp-meta">
+            <span class="exp-role">IT Intern</span>
+            <span class="exp-dates">May 2008 – Aug 2008</span>
+          </div>
+
+          <a href="http://www.advancedenergy.org/" class="exp-link" target="_blank" rel="noopener noreferrer">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+            advancedenergy.org
+          </a>
+
+          <div class="exp-tech">
+            <span class="exp-tag">JavaScript</span>
+            <span class="exp-tag">HTML</span>
+            <span class="exp-tag">CSS</span>
+            <span class="exp-tag">PHP</span>
+          </div>
+
+          <p class="exp-desc">
+            Extended existing applications that monitor power consumption at homes, schools, and
+            industries in the area, generating graphical reports. Also built intranet tools.
+          </p>
+        </article>
+
+        <!-- ITECS, NCSU -->
+        <article class="exp-item">
+          <div class="exp-dot" aria-hidden="true"></div>
+
+          <h3 class="exp-company">ITECS, North Carolina State University</h3>
+          <div class="exp-meta">
+            <span class="exp-role">Web Developer</span>
+            <span class="exp-dates">Jan 2008 – Dec 2008</span>
+          </div>
+
+          <a href="http://www.itecs.ncsu.edu/" class="exp-link" target="_blank" rel="noopener noreferrer">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+            itecs.ncsu.edu
+          </a>
+
+          <div class="exp-tech">
+            <span class="exp-tag">JavaScript</span>
+            <span class="exp-tag">HTML</span>
+            <span class="exp-tag">CSS</span>
+            <span class="exp-tag">PHP</span>
+          </div>
+
+          <p class="exp-desc">
+            Built a range of web applications — from simulation models for student theory papers
+            to photo upload tools.
+          </p>
+        </article>
+
+      </section>
+
+    </main>
+
+  </div><!-- /.resume-wrapper -->
+
 </body>
 </html>
