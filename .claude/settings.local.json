@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(du -sh /Users/niranjanprithviraj/Projects/niranjanprithviraj.com/*)",
+      "Bash(python3:*)"
+    ]
+  }
+}
