@@ -69,6 +69,9 @@ function tabDisplay(id){
 			//formatBlogJson(window.blogJson);
 			init(getBlogFeed);
 		break;
+		case 'weeknights':
+			init(getWeeknightRecipes);
+		break;
 		default:
 			return false;
 	}

@@ -50,6 +50,9 @@
       <li id="lastfm">
         <a href="#lastfm"><i class="icon-music"></i>last.fm</a>
       </li>
+      <li id="weeknights">
+        <a href="#weeknights"><i class="icon-list-ul"></i>weeknights</a>
+      </li>
     </ul>
   </div><!-- horizontal menu -->
   <div id="main-profile" class="pure-u-1-1">

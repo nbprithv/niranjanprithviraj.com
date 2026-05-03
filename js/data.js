@@ -411,6 +411,49 @@ function getGitHub(){
 		},
 	});	
 }
+function getWeeknightRecipes() {
+	var colors = ['#2E7D32', '#388E3C', '#43A047', '#558B2F'];
+	var items = [
+		{ label: 'Vegan Stuffed Cabbage Rolls', sub: '', c: 0 },
+		{ label: 'Ingredients', sub: '1 whole cabbage', c: 1 },
+		{ label: 'Filling', sub: '10 oz (280g) cooked rice &bull; 14 oz (400g) mushrooms, finely chopped &bull; 1 onion, diced &bull; 2 garlic cloves, minced &bull; 2 carrots, grated &bull; fresh parsley &amp; dill &bull; salt &amp; black pepper', c: 2 },
+		{ label: 'Sauce', sub: '28 oz (793g) crushed tomatoes &bull; 1 tbsp tomato paste &bull; 1 onion, diced &bull; 2 carrots, grated &bull; 3 garlic cloves, minced &bull; 2 bay leaves &bull; salt &amp; black pepper', c: 3 },
+		{ label: '1. Prep the cabbage', sub: 'Cut out the core and boil the whole cabbage in salted water for about 3 minutes. Remove the softened leaves. Repeat until you have enough leaves. Don\'t overcook &mdash; they should stay flexible, not mushy.', c: 0 },
+		{ label: '2. Make the filling', sub: 'Saut&eacute; the onion in oil until soft. Add mushrooms and cook until browned. Stir in carrots, garlic, herbs, salt and pepper. Mix with the cooked rice. Set aside.', c: 1 },
+		{ label: '3. Roll the cabbage', sub: 'Trim the thick stems from cabbage leaves. Add 1&ndash;2 heaping tablespoons of filling, roll it up tightly like a wrap. Line a baking dish with leftover cabbage leaves and arrange the rolls snugly.', c: 2 },
+		{ label: '4. Make the sauce', sub: 'Saut&eacute; the onion until soft. Add carrots and cook for a few minutes. Stir in tomato paste, then add crushed tomatoes. Simmer for 5 minutes. Add garlic, salt and pepper.', c: 3 },
+		{ label: '5. Bake', sub: 'Pour sauce over the cabbage rolls. Add bay leaves on top. Cover and bake at 350&deg;F (180&deg;C) for 50&ndash;60 minutes.', c: 0 },
+		{ label: '&mdash;', sub: '', c: 1 },
+		{ label: 'Crispy Quinoa &amp; Roasted Asparagus Salad', sub: 'By Jamie Vespa MS, RD &bull; Prep: 20 min &bull; Cook: 25 min &bull; Serves: 4 &bull; Vegan &bull; Gluten-free', c: 2 },
+		{ label: 'Salad Ingredients', sub: '2 cups cooked &amp; cooled quinoa &bull; 1 Tbsp tamari or soy sauce &bull; 1 Tbsp toasted sesame oil &bull; 1 lb asparagus, trimmed &bull; 1 Tbsp olive oil &bull; &frac12; tsp kosher salt &bull; 1 cup shelled edamame &bull; 1 large avocado, diced &bull; &frac12; cup chopped scallions &bull; &frac14; cup chopped fresh basil &bull; 1&ndash;2 Tbsp toasted sesame seeds (optional)', c: 3 },
+		{ label: 'Ginger-Sesame Dressing', sub: '2 Tbsp tahini &bull; 2 Tbsp seasoned rice vinegar &bull; 1 Tbsp tamari &bull; 1 Tbsp toasted sesame oil &bull; 1 Tbsp maple syrup &bull; 1 Tbsp fresh lime juice &bull; 1&frac12; tsp grated fresh ginger &bull; &frac12; tsp grated garlic', c: 0 },
+		{ label: '1. Preheat &amp; prep pans', sub: 'Preheat oven to 375&deg;F. On a parchment-lined baking sheet, toss quinoa with tamari and sesame oil; spread into an even layer. On a separate sheet, toss asparagus with olive oil and salt in a single layer.', c: 1 },
+		{ label: '2. Roast', sub: 'Place both pans in the oven (quinoa on center rack, asparagus one rack below). After 10 minutes, remove asparagus and set aside to cool. Toss quinoa and return to oven for another 15 minutes (25 min total), until golden and crispy.', c: 2 },
+		{ label: '3. Make dressing', sub: 'Combine all dressing ingredients in a jar or bowl and whisk well to combine.', c: 3 },
+		{ label: '4. Assemble', sub: 'In a large bowl, combine edamame, avocado, scallions, and basil. Slice asparagus on the bias into 2-inch pieces and add to bowl. Top with crispy quinoa, pour dressing over, and gently toss. Garnish with sesame seeds. Best enjoyed fresh.', c: 0 },
+		{ label: '&mdash;', sub: '', c: 1 },
+		{ label: 'Dubki Wali Kadhi', sub: 'Urad dal pakora dumplings in a tangy yogurt curry &bull; Serve with hot rice', c: 2 },
+		{ label: 'Dal Batter (Pakoras)', sub: 'Soak &frac12; cup urad dal for 4&ndash;5 hours or overnight, then grind with 4&ndash;5 garlic cloves, 1 inch ginger, 2 green chillies, &frac12; tsp black pepper powder. Whisk batter until fluffy, add salt to taste.', c: 3 },
+		{ label: 'Kadhi Base', sub: '1 cup dahi (yogurt) &bull; 2 Tbsp urad dal batter &bull; 2 cups water &bull; oil &bull; 1 tsp jeera &bull; 1 tsp mustard seeds &bull; 1 medium onion, finely chopped &bull; 8&ndash;10 curry leaves &bull; 1 tsp turmeric powder &bull; 1 Tbsp red chilli powder', c: 0 },
+		{ label: 'Tadka', sub: 'Kashmiri red chilli powder &bull; whole dried red chillies &bull; oil', c: 1 },
+		{ label: '1. Make the batter', sub: 'Soak urad dal 4&ndash;5 hours or overnight. Grind with garlic, ginger, green chillies, and black pepper. Whisk until fluffy and season with salt.', c: 2 },
+		{ label: '2. Prepare kadhi liquid', sub: 'Mix 1 cup dahi with 2 Tbsp of the batter. Add 2 cups water and mix well.', c: 3 },
+		{ label: '3. Cook the kadhi', sub: 'Heat oil in a kadhai. Add jeera and mustard seeds. Once they splutter, add onion and curry leaves; cook until golden. Stir in turmeric and red chilli powder. Pour in the dahi mixture and cook 7&ndash;8 minutes until slightly thick.', c: 0 },
+		{ label: '4. Add pakoras', sub: 'Shape remaining batter into small dumplings and drop directly into the kadhi. Cook for another 7&ndash;8 minutes.', c: 1 },
+		{ label: '5. Tadka &amp; garnish', sub: 'Finish with a tadka of Kashmiri red chilli powder and whole red chillies in hot oil poured over the kadhi. Garnish with finely chopped coriander. Enjoy with hot rice!', c: 2 }
+	];
+	$('#loader').hide();
+	for (var i = 0; i < items.length; i++) {
+		var item = items[i];
+		var text = '<div style="font-weight:bold;color:#FFF;">' + item.label + '</div>';
+		if (item.sub) {
+			text += '<div style="color:#C8E6C9;font-size:0.85em;margin-top:4px;">' + item.sub + '</div>';
+		}
+		var finaltext = '<li style="background-color:' + colors[item.c] + ';padding:10px;">' + text + '</li>';
+		$(window.cardContentDiv).append(finaltext);
+	}
+	fadeIn();
+}
 function formatGitHubJson(data){
 	var githubcolor = ['#F6F6F6'];
 	var githubicons = ['img/github.png','img/github_icon.png','img/github_logo.png'];
